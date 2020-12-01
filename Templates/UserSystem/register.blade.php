@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Gamper Plumber Inc.</title>
-	<script type="text/javascript" src="../../static/js/registration.js" defer></script>
+	<script type="module" src="../../static/js/registration.js" defer></script>
 </head>
 <body>
 	<h1>Register</h1>

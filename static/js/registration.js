@@ -1,3 +1,5 @@
+import {dataHandler} from "./datahandler.js";
+
 init();
 
 function init() {
@@ -12,7 +14,9 @@ function validateUserData() {
 
 	if (checkNonEmptyFields(userInput,  passwordOne, passwordTwo, errorContainer)) {
 
-		checkEqualPasswords(passwordOne, passwordTwo, errorContainer);
+		if (checkEqualPasswords(passwordOne, passwordTwo, errorContainer)) {
+
+		}
 
 	}
 
@@ -35,5 +39,7 @@ function checkEqualPasswords(passwordOne, passwordTwo, errorContainer) {
 		errorContainer.innerHTML = "Mismatched passwords!";
 		return false;
 	}
+
+	return true;
 
 }
