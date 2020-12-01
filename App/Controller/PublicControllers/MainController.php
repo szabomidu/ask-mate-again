@@ -1,9 +1,10 @@
 <?php
 
 
-namespace App\Controller;
+namespace App\Controller\PublicControllers;
 
 
+use App\Controller\BaseController;
 use BK_Framework\Database\Connection\Connection;
 use BK_Framework\Database\QueryTools\Queries;
 

@@ -4,7 +4,7 @@
 namespace App\Routes;
 
 
-use App\Controller\MainController;
+use App\Controller\PublicControllers\MainController;
 use BK_Framework\Router\Router;
 
 class MainRoutes implements RouteInitializer

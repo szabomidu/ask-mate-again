@@ -7,15 +7,16 @@ function init() {
 }
 
 function validateUserData() {
-	const userInput = document.querySelector("#username").value;
+	const username = document.querySelector("#username").value;
 	const passwordOne = document.querySelector("#password_one").value;
 	const passwordTwo = document.querySelector("#password_two").value;
 	const errorContainer = document.querySelector("#error-message");
 
-	if (checkNonEmptyFields(userInput,  passwordOne, passwordTwo, errorContainer)) {
+	if (checkNonEmptyFields(username,  passwordOne, passwordTwo, errorContainer)) {
 
 		if (checkEqualPasswords(passwordOne, passwordTwo, errorContainer)) {
-
+			const user = {username: username, passwordOne: passwordOne, passwordTwo: passwordTwo};
+			dataHandler._api_post("/api/register", user, redirectToMainPage, displayErrorMessages);
 		}
 
 	}
@@ -41,5 +42,19 @@ function checkEqualPasswords(passwordOne, passwordTwo, errorContainer) {
 	}
 
 	return true;
+
+}
+
+function redirectToMainPage() {
+
+	console.log("response");
+	window.location.replace("/");
+
+}
+
+function displayErrorMessages() {
+
+
+	console.log("Response not JSON")
 
 }

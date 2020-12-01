@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Controller\UserSystemControllers;
+namespace App\Controller\PublicControllers\UserSystemControllers;
 
 
 use App\Controller\BaseController;
