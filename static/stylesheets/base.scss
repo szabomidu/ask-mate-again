@@ -1,14 +1,11 @@
-$primary-color: #eae2d6;
-$secondary-color: #b7950a;
-$text-color-light: #eeeeee;
-
+@import 'variables';
 
 body {
-  background-color: $primary-color;
+  background-color: $background-color;
 }
 
 .profile-bar {
-  background-color: $secondary-color;
+  background-color: $background-color-lighter;
   color: $text-color-light;
 
   height: 50px;

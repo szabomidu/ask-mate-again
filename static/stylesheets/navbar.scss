@@ -1,7 +1,4 @@
-$background-color: #eae2d6;
-$background-color-darker: #867666;
-$text-color-dark: #474747;
-$text-color-light: #eeeeee;
+@import "variables";
 
 %display-flex {
   display: flex;
