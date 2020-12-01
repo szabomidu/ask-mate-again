@@ -1,0 +1,21 @@
+$primary-color: #eae2d6;
+$secondary-color: #b7950a;
+$text-color-light: #eeeeee;
+
+
+body {
+  background-color: $primary-color;
+}
+
+.profile-bar {
+  background-color: $secondary-color;
+  color: $text-color-light;
+
+  height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
