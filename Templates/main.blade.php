@@ -3,32 +3,37 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Gamper Plumber Inc.</title>
+
+	<link rel="stylesheet" type="text/css" href="../../static/stylesheets/main.css">
 </head>
 
 <body>
-@include("header")
-<h1 class="header">Welcome to the Gardening Q&A by Crosswalk Transform</h1>
-<h3 class="text"> This is a qreat place for beginner gardeners, <br>
-	here you can find the answers you are looking for and help others with your knowledge!</h3>
+	@include("header")
+
+	<div class="welcome-text">
+		<h1 class="header">Welcome to the Gamper Plumber Inc. by Crosswalk Transform</h1>
+		<h2 class="text"> This is the best place for a beginner plumber, <br>
+			here you can find the answers you are looking for and help others with your knowledge!</h2>
+	</div>
 
 @include("navbar")
-<div class="table_div">
-	<table class="content-table">
+<div>
+	<table>
 		<thead>
-		<tr class="head" style="text-align: center">
-			<th class="th">ID</th>
-			<th class="th">Submission Time</th>
-			<th class="th">Title</th>
-			<th class="th">Message</th>
-			<th class="th">Image</th>
-			<th class="th">Vote Number</th>
+		<tr>
+			<th>ID</th>
+			<th>Submission Time</th>
+			<th>Title</th>
+			<th>Message</th>
+			<th>Image</th>
+			<th>Vote Number</th>
 		</tr>
 		</thead>
 
 		<tbody>
 
 		@foreach($questions as $question)
-			<tr class="active-row">
+			<tr>
 				<td>{{$question->get("id")}}</td>
 				{{--				<td>{{ $question->get("submission_time") }}</td>--}}
 				<td>SUBMISSION TIME</td>
