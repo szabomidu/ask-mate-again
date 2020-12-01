@@ -16,7 +16,7 @@ function validateUserData() {
 
 		if (checkEqualPasswords(passwordOne, passwordTwo, errorContainer)) {
 			const user = {username: username, passwordOne: passwordOne, passwordTwo: passwordTwo};
-			dataHandler._api_post("/api/register", user, redirectToMainPage, displayErrorMessages);
+			dataHandler._api_post_without_response("/api/register", user, redirectToMainPage, displayErrorMessages);
 		}
 
 	}
@@ -45,10 +45,9 @@ function checkEqualPasswords(passwordOne, passwordTwo, errorContainer) {
 
 }
 
-function redirectToMainPage(data) {
+function redirectToMainPage() {
 
-	console.log(data);
-	// window.location.replace("/");
+	window.location.replace("/");
 
 }
 

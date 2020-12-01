@@ -51,6 +51,21 @@ export let dataHandler = {
 		})
 			.then(response => response.json())
 			.then(json_response => callback(json_response))
-	}
+	},
+
+	_api_post_without_response: function (url, data, callback, errorCallback) {
+
+		fetch(url, {
+			method: 'POST',
+			credentials: 'same-origin',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(data)
+		})
+			.then(callback)
+			.catch(error => errorCallback(error));
+	},
+
 
 };

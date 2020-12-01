@@ -8,6 +8,7 @@ use App\Controller\APIControllers\UserSystemControllers\APIRegistrationControlle
 use App\Controller\PublicControllers\UserSystemControllers\RegistrationController;
 use App\Exception\InvalidRegistrationException;
 use App\Model\User;
+use BK_Framework\Exception\NoSessionException;
 use BK_Framework\Helper\JSON;
 use BK_Framework\Logger\Logger;
 use BK_Framework\Router\Router;
@@ -31,6 +32,8 @@ class UserSystemRoutes implements RouteInitializer
 				$controller->run();
 			} catch (InvalidRegistrationException $exception) {
 				echo JSON::encode([$exception->getMessage()]);
+				Logger::getInstance()->error($exception->getMessage());
+			} catch (NoSessionException $exception) {
 				Logger::getInstance()->error($exception->getMessage());
 			}
 

@@ -9,7 +9,9 @@ use App\Exception\InvalidRegistrationException;
 use App\Model\User;
 use App\Queries\UserQueries;
 use BK_Framework\Database\Connection\Connection;
+use BK_Framework\Exception\NoSessionException;
 use BK_Framework\Helper\JSON;
+use BK_Framework\SuperGlobal\Session;
 
 class APIRegistrationController extends BaseController
 {
@@ -28,14 +30,16 @@ class APIRegistrationController extends BaseController
 
 	/**
 	 * @throws InvalidRegistrationException
+	 * @throws NoSessionException
 	 */
 	public function run()
 	{
+		session_start();
 		$pdo = Connection::getConnection(self::$dbConfig);
 		if (UserQueries::checkIfUsernameExists($pdo, self::$user)) {
 			throw new InvalidRegistrationException("Username is already taken");
 		}
 		$userId = UserQueries::registerNewUser($pdo, self::$user);
-		echo $userId;
+		Session::login($userId);
 	}
 }
