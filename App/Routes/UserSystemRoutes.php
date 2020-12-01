@@ -31,7 +31,7 @@ class UserSystemRoutes implements RouteInitializer
 				$controller = new APIRegistrationController($user);
 				$controller->run();
 			} catch (InvalidRegistrationException $exception) {
-				echo JSON::encode([$exception->getMessage()]);
+				echo JSON::encode(["state"=>"taken"]);
 				Logger::getInstance()->error($exception->getMessage());
 			} catch (NoSessionException $exception) {
 				Logger::getInstance()->error($exception->getMessage());

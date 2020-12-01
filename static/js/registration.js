@@ -16,7 +16,7 @@ function validateUserData() {
 
 		if (checkEqualPasswords(passwordOne, passwordTwo, errorContainer)) {
 			const user = {username: username, passwordOne: passwordOne, passwordTwo: passwordTwo};
-			dataHandler._api_post_without_response("/api/register", user, redirectToMainPage, displayErrorMessages);
+			dataHandler._api_post("/api/register", user, redirectToMainPage, displayErrorMessages);
 		}
 
 	}
@@ -45,14 +45,19 @@ function checkEqualPasswords(passwordOne, passwordTwo, errorContainer) {
 
 }
 
-function redirectToMainPage() {
+function redirectToMainPage(data) {
 
-	window.location.replace("/");
+	if (data["state"] === "success") {
+		//TODO: waiting before redirection
+		window.location.replace("/");
+	}
+	else if (data["state"] === "taken") {
+		document.querySelector("#error-message").innerHTML = "Username is already taken";
+	}
 
 }
 
 function displayErrorMessages() {
-
 
 	console.log("Response not JSON")
 

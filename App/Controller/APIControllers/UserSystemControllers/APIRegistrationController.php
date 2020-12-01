@@ -41,5 +41,6 @@ class APIRegistrationController extends BaseController
 		}
 		$userId = UserQueries::registerNewUser($pdo, self::$user);
 		Session::login($userId);
+		echo JSON::encode(["state"=>"success"]);
 	}
 }
