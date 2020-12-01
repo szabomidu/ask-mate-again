@@ -35,6 +35,7 @@ class APIRegistrationController extends BaseController
 		if (UserQueries::checkIfUsernameExists($pdo, self::$user)) {
 			throw new InvalidRegistrationException("Username is already taken");
 		}
-		echo JSON::encode(["Success"]);
+		$userId = UserQueries::registerNewUser($pdo, self::$user);
+		echo $userId;
 	}
 }
