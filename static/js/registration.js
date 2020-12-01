@@ -45,10 +45,10 @@ function checkEqualPasswords(passwordOne, passwordTwo, errorContainer) {
 
 }
 
-function redirectToMainPage() {
+function redirectToMainPage(data) {
 
-	console.log("response");
-	window.location.replace("/");
+	console.log(data);
+	// window.location.replace("/");
 
 }
 

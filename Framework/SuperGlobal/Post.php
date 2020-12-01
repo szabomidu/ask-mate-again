@@ -4,6 +4,8 @@
 namespace BK_Framework\SuperGlobal;
 
 
+use BK_Framework\Helper\JSON;
+
 /**
  * Class Post
  *
@@ -44,6 +46,11 @@ class Post
 	public static function keySet() : array
 	{
 		return array_keys($_POST);
+	}
+
+	public static function requestBody() : array
+	{
+		return JSON::decode(file_get_contents('php://input'));
 	}
 
 }
