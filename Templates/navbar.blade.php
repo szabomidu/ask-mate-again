@@ -10,7 +10,7 @@
 	<ul>
 		<li>Users</li>
 		<li>My Profile</li>
-		<li>Registration</li>
+		<li><a href="/register">Registration</a></li>
 		<li>Login</li>
 		<li>Tags</li>
 		<li>Show all questions</li>
