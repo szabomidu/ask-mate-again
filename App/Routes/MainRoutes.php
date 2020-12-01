@@ -16,5 +16,6 @@ class MainRoutes implements RouteInitializer
 			$controller = new MainController();
 			$controller->run();
 		}, "GET");
+
     }
 }
