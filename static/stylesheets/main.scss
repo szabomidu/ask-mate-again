@@ -1,9 +1,10 @@
-$primary-color: #eae2d6;
-$secondary-color: #b7950a;
+$background-color: #eae2d6;
+$background-color-lighter: #b7950a;
+$background-color-darker: #867666;
 $hover-color: #e20505;
 $text-color-dark: #474747;
 $text-color-light: #eeeeee;
-
+$table-cell-background-color-light: #d5c3aa;
 
 %display-flex {
   display: flex;
@@ -11,11 +12,17 @@ $text-color-light: #eeeeee;
   align-content: center;
 }
 
+
+/********************************/
 /* Header bar with profile info */
+/********************************/
 @import url(base.css);
 
+
+/****************/
 /* Welcome text */
-.header {
+/****************/
+.main-text {
   color: $text-color-dark;
   text-align: center;
   margin-right: 100px;
@@ -30,43 +37,56 @@ $text-color-light: #eeeeee;
   margin-bottom: 40px;
 }
 
+
+/*********************/
 /* Navbar with links */
+/*********************/
+@import url(navbar.css);
 
-.navbar{
-  @extend %display-flex;
 
-  background-color: #867666;
+/*****************/
+/* Content table */
+/*****************/
+.content-table {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  background:  #867666;
 
-  height: 50px;
-  margin: 10px;
+  width: 98.5%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3px;
+
+  border: 2px solid #867666;
   border-radius: 10px;
+  font-size: 15px;
+  overflow: hidden;
 
-  ul {
-    @extend %display-flex;
-    flex-direction: row;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  thead {
+    color: $text-color-light;
 
-    li {
-      @extend %display-flex;
-      flex-direction: column;
+    font-size: 18px;
+    font-weight: bold;
 
-      a {
-        color: $text-color-light;
-        text-decoration: none;
-
-        padding: 10px 30px;
-        border-radius: 5px;
-        font-size: 20px;
-      }
-
-      a:hover {
-        color: $text-color-dark;
-        background-color: $primary-color;
-      }
+    th {
+      padding: 5px 15px;
+      color: $text-color-light;
+      background-color: $background-color-darker;
     }
   }
+
+  tbody {
+    background-color: $table-cell-background-color-light;
+    color: $text-color-dark;
+
+    font-weight: bold;
+
+    td {
+      height: 50px;
+      padding: 6px 15px;
+    }
+  }
+
+  tr {
+    text-align: center;
+  }
 }
-
-
