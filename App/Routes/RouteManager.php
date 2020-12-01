@@ -11,7 +11,8 @@ class RouteManager
 
 	public static function init()
 	{
-		array_push(self::$routes, new MainRoutes());
+		self::$routes = array(new MainRoutes(),
+							new UserSystemRoutes());
 		foreach (self::$routes as $route) $route->init();
 	}
 

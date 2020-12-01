@@ -21,17 +21,18 @@ abstract class BaseController
 
 	/**
 	 * BaseController constructor.
+	 * @param string $templateSubPath
 	 */
-	public function __construct()
+	public function __construct(string $templateSubPath = "")
 	{
 		try{
-			$this->configureApp();
+			$this->configureApp($templateSubPath);
 		} catch (Exception $exception) {
 			echo "Could not load configuration date";
 		}
 	}
 
-	private function configureApp()
+	private function configureApp(string $templateSubPath)
 	{
 		$configurationContent = File::read($this->getRootDirectory() . "Config/config.json");
 		$config = JSON::decode($configurationContent);
@@ -39,7 +40,7 @@ abstract class BaseController
 		self::$dbConfig = $config["database_connection"];
 
 		$templateInfo = $config["template_engine"];
-		self::$view = new BladeView($templateInfo["templates"], $templateInfo["template-cache"]);
+		self::$view = new BladeView($templateInfo["templates"] . DIRECTORY_SEPARATOR . $templateSubPath, $templateInfo["template-cache"]);
 
 		$logInfo = $config["logging"];
 		Logger::setLogDirectory($logInfo["log-directory"]);
@@ -58,7 +59,7 @@ abstract class BaseController
 
 	public abstract function run();
 
-	protected function view(string $template, array $variables) : void
+	protected function view(string $template, array $variables = array()) : void
 	{
 		self::$view->render($template, $variables);
 	}

@@ -4,7 +4,7 @@
 namespace App\Routes;
 
 
-use App\Controller\MainController;
+use App\Controller\PublicControllers\MainController;
 use BK_Framework\Router\Router;
 
 class MainRoutes implements RouteInitializer
@@ -16,5 +16,6 @@ class MainRoutes implements RouteInitializer
 			$controller = new MainController();
 			$controller->run();
 		}, "GET");
+
     }
 }
