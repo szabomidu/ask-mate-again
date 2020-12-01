@@ -25,7 +25,7 @@ class MainController extends BaseController
 				FROM question
 				ORDER BY id DESC
 				LIMIT 5";
-		$result = Queries::queryAll($pdo, $sql);
-		foreach($result as $record) echo $record->get('title');
+		$questions = Queries::queryAll($pdo, $sql);
+		$this->view("main", ["questions"=>$questions]);
 	}
 }
