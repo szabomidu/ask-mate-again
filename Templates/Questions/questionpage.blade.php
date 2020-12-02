@@ -5,6 +5,8 @@
     <title>Gamper Plumber Inc.</title>
 
     <link rel="stylesheet" type="text/css" href="../../static/stylesheets/question.css">
+    <script type="module" src="../../static/js/questionPage.js" defer></script>
+
 </head>
 
 <body>
@@ -20,20 +22,11 @@
 <div class="question">
     <div id="tag-container">
         <ul>
-            <li>Tag1 <div class="delete-tag">x</div></li>
-            <li>Tag1 <div class="delete-tag">x</div></li>
-            <li>Taadg1 <div class="delete-tag">x</div></li>
-            <li>Taadg1 <div class="delete-tag">x</div></li>
-            <li>Twaddwadag1 <div class="delete-tag">x</div></li>
-            <li>Twaddwadag1 <div class="delete-tag">x</div></li>
-            <li>Twaddwadag1 <div class="delete-tag">x</div></li>
-            <li>Tadwg1 <div class="delete-tag">x</div></li>
-            <li>Tadwg1 <div class="delete-tag">x</div></li>
-            <li>Tadwdg1 <div class="delete-tag">x</div></li>
-
-{{--            @foreach($tags as $tag)--}}
-{{--                <li>{{$tag->get("name")}}</li>--}}
-{{--            @endforeach--}}
+            @foreach($tags as $tag)
+                <li>{{$tag->get("name")}}
+                    <div class="delete-tag" data-id="{{$tag->get("id")}}">x</div>
+                </li>
+            @endforeach
         </ul>
     </div>
 
@@ -47,7 +40,6 @@
         <a href="/delete-question?id={{\BK_Framework\SuperGlobal\Get::get("id")}}">Delete question</a>
     </div>
 </div>
-
 
 
 <div class="answers">
