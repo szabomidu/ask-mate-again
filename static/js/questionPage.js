@@ -16,8 +16,17 @@ function deleteTag() {
     dataHandler._api_delete("/api/delete-tag", tag, removeTagCard, displayErrorMessages);
 }
 
-function removeTagCard() {
-
+function removeTagCard(data) {
+    [... document.querySelectorAll(".delete-tag")]
+        .forEach((element) => {
+            if (parseInt(element.dataset.id) === data['tagId']) {
+                console.log(element);
+                element.parentElement.remove();
+            }
+        })
+    if (document.querySelector('#tag-container ul').childElementCount === 0) {
+        document.querySelector('#tag-container').remove();
+    }
 }
 
 function displayErrorMessages() {
