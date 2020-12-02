@@ -7,6 +7,7 @@ namespace App\Queries;
 use App\Model\User;
 use BK_Framework\Database\QueryTools\Queries;
 use PDO;
+use function Symfony\Component\String\s;
 
 class UserQueries
 {
@@ -30,5 +31,24 @@ class UserQueries
 		return Queries::executeAndReturnWithId($pdo, $sql, ["email"=>$user->getUsername(),
 															"password"=>$hashedPassword]);
 	}
+
+    public static function checkIfUsernameValid(PDO $pdo, string $username, $password) : bool
+    {
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        $sql = "SELECT EXISTS 
+                    (SELECT email 
+                    FROM registered_user)
+                    WHERE email = :email, password_hash = :hashedPassword)
+                    AS 'valid'";
+        return Queries::queryOne($pdo, $sql, ["email"=>$username, "password_hashed"=>$hashedPassword])->get("valid");
+    }
+
+    public static function getUserIdByUsername(PDO $pdo, string $username)
+    {
+        $sql = "SELECT id
+                FROM registered_user
+                WHERE email = :username";
+        return Queries::queryOne($pdo, $sql, ["email"=>$username])->get("id");
+    }
 
 }
