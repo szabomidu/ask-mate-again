@@ -53,7 +53,9 @@
 
 .set div:nth-child(7) {
     left: 20%;
-    animation: leaf1 10s linear infinite;
+    animation: leaf1 8s linear infinite;
+    animation-delay: -2s;
+    rotation: 40deg;
 }
 
 .set div:nth-child(8) {
