@@ -6,6 +6,7 @@ namespace App\Routes;
 
 use App\Controller\APIControllers\UserSystemControllers\APILoginController;
 use App\Controller\APIControllers\UserSystemControllers\APIRegistrationController;
+use App\Controller\APIControllers\UserSystemControllers\LogoutController;
 use App\Controller\PublicControllers\UserSystemControllers\LoginController;
 use App\Controller\PublicControllers\UserSystemControllers\RegistrationController;
 use App\Exception\InvalidLoginException;
@@ -59,6 +60,11 @@ class UserSystemRoutes implements RouteInitializer
                 Logger::getInstance()->error($exception->getMessage());
             }
         }, "POST");
+    
+    	Router::add("/logout", function () {
+			$controller = new LogoutController();
+			$controller->run();
+		}, "GET");
 	}
 
 }

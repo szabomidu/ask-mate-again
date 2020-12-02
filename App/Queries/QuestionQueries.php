@@ -4,6 +4,7 @@
 namespace App\Queries;
 
 
+use App\Model\Question;
 use BK_Framework\Database\QueryTools\Queries;
 use PDO;
 
@@ -17,6 +18,16 @@ class QuestionQueries
 				ORDER BY id DESC
 				LIMIT 5";
 		return Queries::queryAll($pdo, $sql);
+	}
+
+	public static function add(PDO $pdo, Question $question, string $userId) : void
+	{
+		$sql = "INSERT INTO question (id_registered_user, title, message, vote_number)
+				VALUES (:userId, :title, :message, 0)";
+
+		Queries::execute($pdo, $sql, ["userId"=>$userId,
+									"title"=>$question->getTitle(),
+									"message"=>$question->getMessage()]);
 	}
 
 }

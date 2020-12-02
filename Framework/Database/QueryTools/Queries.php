@@ -28,7 +28,7 @@ class Queries
 	 * place into the prepared statement
 	 * @return array Consists ResultSet-type objects
 	 */
-	public static function queryAll(PDO $pdo, string $sql, array $variables = array()) : array
+	public static function queryAll(PDO $pdo, string $sql, array $variables = array()): array
 	{
 		$stmt = $pdo->prepare($sql);
 		$stmt->execute($variables);
@@ -45,11 +45,25 @@ class Queries
 	 * place into the prepared statement
 	 * @return ResultSet
 	 */
-	public static function queryOne(PDO $pdo, string $sql, array $variables = array()) : ResultSet
+	public static function queryOne(PDO $pdo, string $sql, array $variables = array()): ResultSet
 	{
 		$stmt = $pdo->prepare($sql);
 		$stmt->execute($variables);
 		return $stmt->fetch();
+	}
+
+	/**
+	 *
+	 * Execute SQL-statements with no explicit return data.
+	 *
+	 * @param PDO $pdo
+	 * @param string $sql
+	 * @param array $variables
+	 */
+	public static function execute(PDO $pdo, string $sql, array $variables = array()): void
+	{
+		$stmt = $pdo->prepare($sql);
+		$stmt->execute($variables);
 	}
 
 	/**
@@ -63,7 +77,7 @@ class Queries
 	 * place into the prepared statement
 	 * @return string The ID of the given record upon which the statement was executed
 	 */
-	public static function executeAndReturnWithId(PDO $pdo, string $sql, array $variables = array()) : string
+	public static function executeAndReturnWithId(PDO $pdo, string $sql, array $variables = array()): string
 	{
 		$stmt = $pdo->prepare($sql);
 		$stmt->execute($variables);
