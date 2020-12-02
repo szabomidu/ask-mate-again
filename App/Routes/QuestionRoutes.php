@@ -10,6 +10,7 @@ use App\Controller\APIControllers\QuestionControllers\APIAddQuestionController;
 use App\Controller\PublicControllers\QuestionControllers\AddQuestionController;
 use App\Controller\PublicControllers\QuestionControllers\EditQuestionController;
 use BK_Framework\Router\Router;
+use BK_Framework\SuperGlobal\Get;
 use BK_Framework\SuperGlobal\Post;
 
 class QuestionRoutes implements RouteInitializer
@@ -17,7 +18,7 @@ class QuestionRoutes implements RouteInitializer
     function init(): void
     {
         Router::add("/question", function () {
-            $id = $_GET["id"];
+            $id = Get::get("id");
             $controller = new QuestionController($id);
             $controller->run();
         }, "GET");
