@@ -1,11 +1,10 @@
-@import url(navbar.css);
-#tag-container ul li, #tag-container ul, #tag-container {
+.answers, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#tag-container ul li, #tag-container ul, #tag-container {
+.answers, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,24 +25,165 @@ body {
   justify-content: center;
 }
 
-#tag-container {
-  width: 40%;
-  margin-left: 30%;
-  text-align: center;
-  background-color: #867666;
-  height: 25px;
-  border-radius: 5px;
+.answers, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#tag-container ul {
+
+.answers, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* Navbar with links */
+.navbar {
+  background-color: #867666;
+  height: 50px;
+  margin: 10px;
+  width: 98.5%;
+  border-radius: 10px;
+}
+.navbar ul {
   flex-direction: row;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-#tag-container ul li {
+.navbar ul li {
   flex-direction: column;
-  margin: 20px;
-  color: white;
+}
+.navbar ul li a {
+  color: #eeeeee;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.navbar ul li a:hover {
+  color: #474747;
+  background-color: #eae2d6;
+}
+
+.title {
+  height: 80px;
+  margin: 10px;
+  background-color: #b7950a;
+  border-radius: 10px;
+  font-size: 30px;
+  color: #eeeeee;
+}
+.title p {
+  margin: 0;
+}
+
+.question {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  min-height: 400px;
+  background-color: #b7950a;
+  border-radius: 10px;
+}
+.question #tag-container {
+  height: auto;
+  width: 95%;
+  margin: 10px;
+  flex-direction: row;
+  background-color: #867666;
+  border-radius: 5px;
+}
+.question #tag-container ul {
+  height: auto;
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  list-style-type: none;
+}
+.question #tag-container ul li {
+  background-color: #b7950a;
+  flex-direction: row;
+  padding: 5px;
+  height: 35px;
+  margin: 5px;
+  color: #eeeeee;
+  border-radius: 10px;
+}
+.question #tag-container ul li .delete-tag {
+  padding: 0 0 20px 5px;
+  color: #e20505;
+  cursor: pointer;
+}
+.question .description {
+  width: 95%;
+  min-height: 280px;
+  color: #eeeeee;
+  text-align: justify;
+  font-size: 25px;
+}
+.question .links {
+  bottom: 0;
+  margin-bottom: 20px;
+}
+.question .links a {
+  color: #eeeeee;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.question .links a:hover {
+  color: #474747;
+  background-color: #eae2d6;
+}
+
+.answers {
+  flex-direction: column;
+  margin: 20px 10px;
+  min-height: 400px;
+  background-color: #867666;
+  border-radius: 10px;
+}
+.answers h1 {
+  padding: 10px 0;
+  text-align: center;
+  color: #eeeeee;
+  font-size: 30px;
+}
+.answers .answer {
+  margin: 10px;
+  width: 95%;
+  background-color: #b7950a;
+  border-radius: 10px;
+}
+.answers .answer .answer-infos {
+  display: flex;
+  flex-direction: row;
+}
+.answers .answer .answer-infos .time {
+  color: #eeeeee;
+  margin-left: 10px;
+  font-size: 17px;
+}
+.answers .answer .answer-infos .votes {
+  color: #eeeeee;
+  margin-left: 30px;
+  font-size: 17px;
+}
+.answers .answer .answer-message {
+  color: #eeeeee;
+  margin-left: 10px;
+  font-size: 25px;
+}
+.answers .answer .answer-message p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=question.css.map */
