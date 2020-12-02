@@ -13,7 +13,6 @@ class AddQuestionController extends BaseController
 
     public function run()
     {
-    	session_start();
     	if (!Session::isLoggedIn()) Server::redirect("/");
 		$this->view("Questions.add-question");
     }

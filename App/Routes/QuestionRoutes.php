@@ -4,6 +4,7 @@
 namespace App\Routes;
 
 use App\Controller\APIControllers\QuestionControllers\APIEditQuestionController;
+use App\Controller\PublicControllers\QuestionControllers\AllQuestionsController;
 use App\Controller\PublicControllers\QuestionControllers\DeleteQuestionController;
 use App\Controller\PublicControllers\QuestionControllers\QuestionController;
 use App\Controller\APIControllers\QuestionControllers\APIAddQuestionController;
@@ -17,6 +18,12 @@ class QuestionRoutes implements RouteInitializer
 {
     function init(): void
     {
+
+		Router::add("/all", function () {
+			$controller = new AllQuestionsController();
+			$controller->run();
+		}, "GET");
+
         Router::add("/question", function () {
             $id = Get::get("id");
             $controller = new QuestionController($id);

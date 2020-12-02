@@ -7,7 +7,7 @@ namespace App\Routes;
 use App\Controller\APIControllers\TagControllers\RemoveTagController;
 use App\Controller\APIControllers\TagControllers\APIAddExistingTagController;
 use App\Controller\APIControllers\TagControllers\APIAddNewTagController;
-use App\Controller\PublicControllers\AllTagsController;
+use App\Controller\PublicControllers\TagControllers\AllTagsController;
 use App\Controller\PublicControllers\TagControllers\AddTagController;
 use BK_Framework\Router\Router;
 use BK_Framework\SuperGlobal\Post;

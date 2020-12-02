@@ -11,6 +11,6 @@ class RegistrationController extends BaseController
 
     public function run()
     {
-		$this->view("register");
+		$this->view("UserSystem.register");
 	}
 }

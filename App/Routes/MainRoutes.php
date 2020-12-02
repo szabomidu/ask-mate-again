@@ -4,7 +4,6 @@
 namespace App\Routes;
 
 
-use App\Controller\PublicControllers\AllQuestionController;
 use App\Controller\PublicControllers\MainController;
 use BK_Framework\Router\Router;
 
@@ -17,11 +16,6 @@ class MainRoutes implements RouteInitializer
 			$controller = new MainController();
 			$controller->run();
 		}, "GET");
-
-        Router::add("/all", function () {
-            $controller = new AllQuestionController();
-            $controller->run();
-        }, "GET");
 
     }
 }
