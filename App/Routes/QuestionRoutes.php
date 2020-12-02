@@ -3,7 +3,7 @@
 
 namespace App\Routes;
 
-use App\Controller\PublicControllers\QuestionController;
+use App\Controller\PublicControllers\QuestionControllers\QuestionController;
 use App\Controller\APIControllers\QuestionControllers\APIAddQuestionController;
 use App\Controller\PublicControllers\QuestionControllers\AddQuestionController;
 use App\Controller\PublicControllers\QuestionControllers\EditQuestionController;

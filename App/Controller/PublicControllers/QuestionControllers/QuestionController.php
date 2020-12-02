@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Controller\PublicControllers;
+namespace App\Controller\PublicControllers\QuestionControllers;
 
 
 use App\Controller\BaseController;
@@ -30,6 +30,6 @@ class QuestionController extends BaseController
         $questionData = QuestionQueries::getQuestionDataById($pdo, $this->id);
         $answers = QuestionQueries::getAnswersToQuestionById($pdo, $this->id);
         $tags = TagQueries::getByQuestionId($pdo, $this->id);
-        $this->view("questionpage", ["questionData"=>$questionData, "tags"=>$tags, "answers"=>$answers]);
+        $this->view("Questions.questionpage", ["questionData"=>$questionData, "tags"=>$tags, "answers"=>$answers]);
     }
 }

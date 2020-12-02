@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Gamper Plumber Inc.</title>
 
-    <link rel="stylesheet" type="text/css" href="../static/stylesheets/question.css">
+    <link rel="stylesheet" type="text/css" href="../../static/stylesheets/question.css">
 </head>
 
 <body>
