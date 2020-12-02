@@ -14,8 +14,8 @@ class AnswerRoutes implements RouteInitializer
 	function init(): void
 	{
 
-		Router::add("/add-answer", function () {
-			$controller = new AddAnswerController();
+		Router::add("/add-answer/([0-9]*)", function ($questionId) {
+			$controller = new AddAnswerController($questionId);
 			$controller->run();
 		}, "GET");
 
