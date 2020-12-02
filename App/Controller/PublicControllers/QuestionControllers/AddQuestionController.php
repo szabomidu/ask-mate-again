@@ -11,7 +11,7 @@ class AddQuestionController extends BaseController
 
     public function run()
     {
-		$this->view("add-question");
+		$this->view("Questions.add-question");
     }
 
 }

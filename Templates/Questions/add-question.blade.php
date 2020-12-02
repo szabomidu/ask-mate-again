@@ -1,10 +1,21 @@
-<h1>Add Question</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Gamper Plumber Inc.</title>
+	<link rel="stylesheet" type="text/css" href="../../static/stylesheets/add.css">
+</head>
 
-<form action="/api/add-question" id="add-question-form" method="POST">
-	<label for="title">Question title</label>
-	<input type="text" id="title" name="title">
-	<label for="message">Question Body</label>
-	<textarea name="message" id="message" cols="30" rows="10" form="add-question-form"></textarea>
-	<input type="submit" value="Ask">
-</form>
+<body>
+
+	@include("header")
+	@include("navbar")
+	<h1>Add your question!</h1>
+	<form action="/api/add-question" id="add-question-form" method="POST">
+		<input type="text" id="title" name="title" placeholder="Title"><br>
+		<textarea name="message" id="message" cols="30" rows="10" form="add-question-form" placeholder="Question"></textarea><br>
+		<input type="submit" value="Add question">
+	</form>
+</body>
+
 
