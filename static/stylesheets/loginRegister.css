@@ -1,10 +1,10 @@
-.form, body {
+.form, body, .profile-bar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.form, body {
+.form, body, .profile-bar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,14 +15,11 @@ body {
 }
 
 .profile-bar {
-  background-color: #b7950a;
+  background-color: #867666;
   color: #eeeeee;
   height: 50px;
   margin: 10px;
   border-radius: 10px;
-  display: flex;
-  align-content: center;
-  justify-content: center;
 }
 
 html {
