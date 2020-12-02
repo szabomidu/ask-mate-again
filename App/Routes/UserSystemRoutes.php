@@ -6,6 +6,7 @@ namespace App\Routes;
 
 use App\Controller\APIControllers\UserSystemControllers\APILoginController;
 use App\Controller\APIControllers\UserSystemControllers\APIRegistrationController;
+use App\Controller\PublicControllers\UserSystemControllers\LoginController;
 use App\Controller\PublicControllers\UserSystemControllers\RegistrationController;
 use App\Exception\InvalidLoginException;
 use App\Exception\InvalidRegistrationException;
@@ -40,6 +41,11 @@ class UserSystemRoutes implements RouteInitializer
 			}
 
 		}, "POST");
+
+        Router::add("/login", function () {
+            $controller = new LoginController("UserSystem");
+            $controller->run();
+        }, "GET");
 
 		Router::add("/api/login", function () {
 		    $userData = Post::requestBody();
