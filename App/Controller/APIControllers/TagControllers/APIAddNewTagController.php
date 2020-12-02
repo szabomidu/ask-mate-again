@@ -7,6 +7,7 @@ namespace App\Controller\APIControllers\TagControllers;
 use App\Controller\BaseController;
 use App\Queries\TagQueries;
 use BK_Framework\Database\Connection\Connection;
+use BK_Framework\Helper\JSON;
 use BK_Framework\SuperGlobal\Post;
 
 class APIAddNewTagController extends BaseController
@@ -30,5 +31,7 @@ class APIAddNewTagController extends BaseController
 		$name = Post::requestBody()["name"];
 		$tagId = TagQueries::add($pdo, $name);
 		TagQueries::addTagToQuestion($pdo, $this->questionId, $tagId);
-	}
+        echo JSON::encode(["id"=>$this->questionId]);
+
+    }
 }
