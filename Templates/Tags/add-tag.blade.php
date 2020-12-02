@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Gamper Plumber Inc.</title>
 	<link rel="stylesheet" type="text/css" href="../../static/stylesheets/loginRegister.css">
+	<script type="module" src="../../static/js/add-tag.js" defer></script>
 </head>
 <body>
 <div class="form">
