@@ -4,8 +4,8 @@
 namespace App\Routes;
 
 
+use App\Controller\APIControllers\QuestionControllers\APIAddQuestionController;
 use App\Controller\PublicControllers\QuestionControllers\AddQuestionController;
-use App\Controller\PublicControllers\UserSystemControllers\RegistrationController;
 use BK_Framework\Router\Router;
 
 class QuestionRoutes implements RouteInitializer
@@ -13,10 +13,17 @@ class QuestionRoutes implements RouteInitializer
 
 	function init(): void
 	{
+
 		Router::add("/add-question", function () {
 			$controller = new AddQuestionController("Questions");
 			$controller->run();
 		}, "GET");
+
+		Router::add("/api/add-question", function () {
+			$controller = new APIAddQuestionController();
+			$controller->run();
+		}, "POST");
+
 	}
 
 }
