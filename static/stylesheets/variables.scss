@@ -9,5 +9,28 @@ $table-cell-background-color-light: #d5c3aa;
 %display-flex {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
+
+%standard-input-field {
+	background-color: $table-cell-background-color-light;
+  	border-radius: 5px;
+}
+
+%standard-button {
+  background-color: $background-color-darker;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}
+
+%standard-placeholder {
+  color: $text-color-dark;
+}
+
+@mixin centered-content($width) {
+  width: $width;
+  margin-left: $width/2;
+  text-align: center;
+}
+
