@@ -8,26 +8,65 @@
 </head>
 
 <body>
+
 @include("header")
+
+<div class="title">
+    <p>{{$questionData->get("title")}}</p>
+</div>
+
 @include("navbar")
 
-<div id="tag-container">
-	@foreach($tags as $tag)
-		<ul>
-			<li>{{$tag->get("name")}}</li>
-		</ul>
-	@endforeach
+<div class="question">
+    <div id="tag-container">
+        <ul>
+            <li>Tag1 <div class="delete-tag">x</div></li>
+            <li>Tag1 <div class="delete-tag">x</div></li>
+            <li>Taadg1 <div class="delete-tag">x</div></li>
+            <li>Taadg1 <div class="delete-tag">x</div></li>
+            <li>Twaddwadag1 <div class="delete-tag">x</div></li>
+            <li>Twaddwadag1 <div class="delete-tag">x</div></li>
+            <li>Twaddwadag1 <div class="delete-tag">x</div></li>
+            <li>Tadwg1 <div class="delete-tag">x</div></li>
+            <li>Tadwg1 <div class="delete-tag">x</div></li>
+            <li>Tadwdg1 <div class="delete-tag">x</div></li>
+
+{{--            @foreach($tags as $tag)--}}
+{{--                <li>{{$tag->get("name")}}</li>--}}
+{{--            @endforeach--}}
+        </ul>
+    </div>
+
+    <div class="description">
+        <p>{{$questionData->get("message")}}</p>
+    </div>
+    <div class="links">
+        <a href="/addtag">Add tag</a>
+        <a href="/addtag">Add answer</a>
+        <a href="/addtag">Delete question</a>
+    </div>
 </div>
 
-<div>
-    <p>{{$questionData->get("title")}}</p>
-    <p>{{$questionData->get("message")}}</p>
-</div>
-<div>
+
+
+<div class="answers">
+    <h1>Answers for this question:</h1>
     @foreach($answers as $answer)
-        <p>{{$answer->get("message")}}</p>
-        <p>{{$answer->get("submission_time")}}</p>
-        <p>{{$answer->get("vote_number")}}</p><br>
+        <div class="answer">
+            <div class="answer-infos">
+                <div class="time">
+                    <p>{{$answer->get("submission_time")}}</p>
+                </div>
+                <div class="votes">
+                    <p>{{$answer->get("vote_number")}} people likes this answer.</p>
+                </div>
+            </div>
+            <div class="answer-message">
+                <p>{{$answer->get("message")}}</p>
+            </div>
+
+        </div>
+
     @endforeach
 </div>
 </body>

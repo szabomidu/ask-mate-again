@@ -16,6 +16,28 @@ body {
   align-content: center;
   justify-content: center;
 }
+.profile-bar .header-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+}
+.profile-bar .header-links .logged-in {
+  font-size: 20px;
+  color: #eeeeee;
+}
+.profile-bar .header-links a {
+  color: #eeeeee;
+  border-radius: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 5px 30px;
+}
+.profile-bar .header-links a:hover {
+  color: #474747;
+  background-color: #eae2d6;
+}
 
 /****************/
 /* Welcome text */
