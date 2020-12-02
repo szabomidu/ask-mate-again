@@ -45,6 +45,13 @@ body {
   overflow: hidden;
 }
 
+#tag-input-button {
+  background-color: #2ecc71;
+}
+#tag-select-button {
+  background-color: #b7950a;
+}
+
 .form {
   flex-direction: column;
   width: 500px;
@@ -92,6 +99,16 @@ body {
 }
 .form .submit button[type=submit]:hover {
   background: #2ecc71;
+}
+
+.hide-both {
+  visibility: hidden;
+}
+
+.hide-item {visibility: hidden}
+
+.display-item {
+  visibility: visible;
 }
 
 /*# sourceMappingURL=loginRegister.css.map */
