@@ -43,7 +43,8 @@
     <div class="links">
         <a href="/addtag">Add tag</a>
         <a href="/addtag">Add answer</a>
-        <a href="/addtag">Delete question</a>
+        <a href="/edit-question?id={{\BK_Framework\SuperGlobal\Get::get("id")}}">Edit question</a>
+        <a href="/delete-question?id={{\BK_Framework\SuperGlobal\Get::get("id")}}">Delete question</a>
     </div>
 </div>
 
