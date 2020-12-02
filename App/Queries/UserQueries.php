@@ -51,7 +51,7 @@ class UserQueries
 		$sql = "SELECT id
                 FROM registered_user
                 WHERE email = :username";
-		return Queries::queryOne($pdo, $sql, ["email" => $username])->get("id");
+		return Queries::queryOne($pdo, $sql, ["username" => $username])->get("id");
 	}
 
 }
