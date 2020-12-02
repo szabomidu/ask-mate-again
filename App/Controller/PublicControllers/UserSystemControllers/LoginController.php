@@ -11,6 +11,6 @@ class LoginController extends BaseController
 
     public function run()
     {
-        $this->view("login");
+        $this->view("UserSystem.login");
     }
 }

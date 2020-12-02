@@ -8,7 +8,7 @@ use App\Controller\BaseController;
 use App\Queries\QuestionQueries;
 use BK_Framework\Database\Connection\Connection;
 
-class AllQuestionController extends BaseController
+class AllQuestionsController extends BaseController
 {
 
     /**
@@ -23,6 +23,6 @@ class AllQuestionController extends BaseController
     {
         $pdo = Connection::getConnection(self::$dbConfig);
         $questions = QuestionQueries::getAllQuestions($pdo);
-        $this->view("all", ["questions"=>$questions]);
+        $this->view("Questions.all-questions", ["questions"=>$questions]);
     }
 }

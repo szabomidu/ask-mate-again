@@ -23,6 +23,6 @@ class AllTagsController extends BaseController
     {
         $pdo = Connection::getConnection(self::$dbConfig);
         $tags = TagQueries::getAllTagsWithCounter($pdo);
-        $this->view("all-tags", ["tags"=>$tags]);
+        $this->view("Tags.all-tags", ["tags"=>$tags]);
     }
 }
