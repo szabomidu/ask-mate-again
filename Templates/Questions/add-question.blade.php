@@ -12,8 +12,8 @@
 	@include("navbar")
 	<h1>Add your question!</h1>
 	<form action="/api/add-question" id="add-question-form" method="POST">
-		<input type="text" id="title" name="title" placeholder="Title"><br>
-		<textarea name="message" id="message" cols="30" rows="10" form="add-question-form" placeholder="Question"></textarea><br>
+		<input type="text" id="title" name="title" placeholder="Title" required><br>
+		<textarea name="message" id="message" cols="30" rows="10" form="add-question-form" placeholder="Question" required></textarea><br>
 		<input type="submit" value="Add question">
 	</form>
 </body>
