@@ -133,8 +133,23 @@
 
 			.votes {
 				color: $text-color-light;
-				margin-left: 30px;
+				margin: 0 20px 0 30px;
 				font-size: 17px;
+			}
+
+			a {
+				@extend %display-flex;
+				color: $text-color-light;
+				text-decoration: none;
+				margin: 5px 10px;
+				padding: 5px 10px;
+				border-radius: 5px;
+				font-size: 17px;
+			}
+
+			a:hover {
+				color: $text-color-dark;
+				background-color: $background-color;
 			}
 		}
 

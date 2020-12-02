@@ -1,10 +1,10 @@
-.answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
+.answers .answer .answer-infos a, .answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
+.answers .answer .answer-infos a, .answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,13 +47,13 @@ body {
   background-color: #eae2d6;
 }
 
-.answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
+.answers .answer .answer-infos a, .answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
+.answers .answer .answer-infos a, .answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -198,8 +198,20 @@ body {
 }
 .answers .answer .answer-infos .votes {
   color: #eeeeee;
-  margin-left: 30px;
+  margin: 0 20px 0 30px;
   font-size: 17px;
+}
+.answers .answer .answer-infos a {
+  color: #eeeeee;
+  text-decoration: none;
+  margin: 5px 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 17px;
+}
+.answers .answer .answer-infos a:hover {
+  color: #474747;
+  background-color: #eae2d6;
 }
 .answers .answer .answer-message {
   color: #eeeeee;
