@@ -1,0 +1,45 @@
+.form, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #eae2d6;
+}
+
+.profile-bar {
+  background-color: #b7950a;
+  color: #eeeeee;
+  height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.form {
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  background-color: #867666;
+  text-align: center;
+  border-radius: 50px;
+}
+
+/*# sourceMappingURL=loginRegister.css.map */

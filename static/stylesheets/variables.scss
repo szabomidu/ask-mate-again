@@ -9,7 +9,7 @@ $table-cell-background-color-light: #d5c3aa;
 %display-flex {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 %standard-input-field {
@@ -33,3 +33,4 @@ $table-cell-background-color-light: #d5c3aa;
   margin-left: $width/2;
   text-align: center;
 }
+

@@ -36,9 +36,10 @@ class FrameworkStatement extends PDOStatement
 	 * @param int $cursor_offset
 	 * @return ResultSet|mixed
 	 */
-	public function fetch($fetch_style = null, $cursor_orientation = PDO::FETCH_ORI_NEXT, $cursor_offset = 0)
+	public function fetch($fetch_style = null, $cursor_orientation = PDO::FETCH_ORI_NEXT, $cursor_offset = 0) : ?ResultSet
 	{
 		$record = parent::fetch($fetch_style, $cursor_orientation, $cursor_offset);
+		if ($record === false) return null;
 		return new ResultSet($record);
 	}
 
