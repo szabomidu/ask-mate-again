@@ -10,13 +10,16 @@
 <div class="form">
 	<div class="title"><h1>Add tag</h1></div>
 
-	<select name="tags" id="tags">
+	<button id="tag-input-button">I would like to add new tag</button>
+	<button id="tag-select-button">I would like to select a tag</button>
+
+	<select name="tags" id="tags" class="hide-both">
 		@foreach($tags as $tag)
 			<option value="{{$tag->get("id")}}">{{$tag->get("name")}}</option>
 		@endforeach
 	</select>
 
-	<input type="text" placeholder="Custom Tag">
+	<input id="tag-input-field" type="text" placeholder="Custom Tag" class="hide-both">
 	<div class="submit">
 		<button type="submit" id="submit-button">Add</button>
 	</div>
