@@ -12,9 +12,8 @@ class TagQueries
 
   public static function getAllTags(PDO $pdo) : array
   {
-      $sql = "SELECT name, count(name) as 'tag_number'
-              FROM ask_mate_again.tag
-              GROUP BY name";
+      $sql = "SELECT id, name
+              FROM ask_mate_again.tag";
       return Queries::queryAll($pdo, $sql);
   }
 
@@ -24,7 +23,6 @@ class TagQueries
 				VALUES (:name)";
         return Queries::executeAndReturnWithId($pdo, $sql, ["name"=>$name]);
     }
-
 
     public static function getAllTagsWithCounter(PDO $pdo): array
     {

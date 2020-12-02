@@ -36,7 +36,7 @@
         <p>{{$questionData->get("message")}}</p>
     </div>
     <div class="links">
-        <a href="/addtag">Add tag</a>
+        <a href="/add-tag/{{\BK_Framework\SuperGlobal\Get::get("id")}}">Add tag</a>
         <a href="/addtag">Add answer</a>
         <a href="/edit-question?id={{\BK_Framework\SuperGlobal\Get::get("id")}}">Edit question</a>
         <a href="/delete-question?id={{\BK_Framework\SuperGlobal\Get::get("id")}}">Delete question</a>
