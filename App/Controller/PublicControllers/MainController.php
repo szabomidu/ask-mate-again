@@ -22,6 +22,7 @@ class MainController extends BaseController
 
 	public function run()
 	{
+		session_start();
 		$pdo = Connection::getConnection(self::$dbConfig);
 		$questions = QuestionQueries::getFiveMostRecentQuestions($pdo);
 		$this->view("main", ["questions"=>$questions]);
