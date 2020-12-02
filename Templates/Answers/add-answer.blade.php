@@ -12,7 +12,6 @@
 @include("navbar")
 <h1>Add your answer!</h1>
 <form action="/api/add-answer/{{$questionId}}" id="add-answer-form" method="POST">
-	<input type="text" id="title" name="title" placeholder="Title" required><br>
 	<textarea name="message" id="message" cols="30" rows="10" form="add-answer-form" placeholder="Answer" required></textarea><br>
 	<input type="submit" value="Add answer">
 </form>
