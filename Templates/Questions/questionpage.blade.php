@@ -20,6 +20,7 @@
 @include("navbar")
 
 <div class="question">
+    @if($tags)
     <div id="tag-container">
         <ul>
             @foreach($tags as $tag)
@@ -29,6 +30,7 @@
             @endforeach
         </ul>
     </div>
+    @endif
 
     <div class="description">
         <p>{{$questionData->get("message")}}</p>
