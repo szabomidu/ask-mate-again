@@ -4,8 +4,10 @@
 namespace App\Routes;
 
 
+use App\Controller\APIControllers\TagControllers\RemoveTagController;
 use App\Controller\PublicControllers\TagControllers\AddTagController;
 use BK_Framework\Router\Router;
+use BK_Framework\SuperGlobal\Post;
 
 class TagRoutes implements RouteInitializer
 {
@@ -16,5 +18,12 @@ class TagRoutes implements RouteInitializer
             $controller = new AddTagController();
             $controller->run();
         }, "GET");
+
+        Router::add("/api/delete-tag", function () {
+            $tagId = Post::requestBody()["tagId"];
+            $questionId = Post::requestBody()["questionId"];
+            $controller = new RemoveTagController($tagId, $questionId);
+            $controller->run();
+        }, "DELETE");
     }
 }

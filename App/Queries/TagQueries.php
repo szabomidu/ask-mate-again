@@ -27,4 +27,12 @@ class TagQueries
 		return Queries::queryAll($pdo, $sql, ["questionId" => $questionId]);
 	}
 
+	public static function removeTagFromQuestion(PDO $pdo, int $tagId, int $questionId)
+    {
+        $sql = "DELETE
+                FROM rel_question_tag
+                WHERE id_question = :questionId AND id_tag = :tagId";
+        Queries::execute($pdo, $sql, ["questionId" => $questionId, "tagId" => $tagId]);
+    }
+
 }
