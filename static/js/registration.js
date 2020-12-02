@@ -46,6 +46,7 @@ function redirectToMainPage(data) {
         }, 2500)
     } else if (data["state"] === "taken") {
         document.querySelector("#error-message").innerHTML = "Username is already taken";
+        document.querySelector("#error-message").classList.add('error');
     }
 }
 
