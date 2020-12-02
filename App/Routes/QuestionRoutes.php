@@ -4,6 +4,7 @@
 namespace App\Routes;
 
 use App\Controller\APIControllers\QuestionControllers\APIEditQuestionController;
+use App\Controller\PublicControllers\QuestionControllers\DeleteQuestionController;
 use App\Controller\PublicControllers\QuestionControllers\QuestionController;
 use App\Controller\APIControllers\QuestionControllers\APIAddQuestionController;
 use App\Controller\PublicControllers\QuestionControllers\AddQuestionController;
@@ -45,5 +46,11 @@ class QuestionRoutes implements RouteInitializer
             $controller = new APIEditQuestionController($id, $title, $message);
             $controller->run();
         }, "PUT");
+
+        Router::add("/delete-question", function () {
+            $id = $_GET["id"];
+            $controller = new DeleteQuestionController($id);
+            $controller->run();
+        }, "GET");
     }
 }
