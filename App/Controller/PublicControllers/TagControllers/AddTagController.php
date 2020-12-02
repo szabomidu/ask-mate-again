@@ -5,11 +5,19 @@ namespace App\Controller\PublicControllers\TagControllers;
 
 
 
-class AddTagController extends \App\Controller\BaseController
+use App\Controller\BaseController;
+use App\Queries\TagQueries;
+use BK_Framework\Database\Connection\Connection;
+
+class AddTagController extends BaseController
 {
 
     public function run()
     {
-        $this->view("tags.addtag");
+        session_start();
+        $pdo = Connection::getConnection(self::$dbConfig);
+        $tags = TagQueries::getAllTags($pdo);
+        $this->view("Tags.add-tag", ["tags"=>$tags]);
     }
 }
+
