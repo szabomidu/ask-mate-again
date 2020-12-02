@@ -18,7 +18,7 @@ class QuestionRoutes implements RouteInitializer
             $controller->run();
         }, "GET");
     
-  	Router::add("/add-question", function () {
+  	    Router::add("/add-question", function () {
 			$controller = new AddQuestionController();
 			$controller->run();
 		}, "GET");
