@@ -30,6 +30,6 @@ function removeTagCard(data) {
 }
 
 function displayErrorMessages() {
-
+    console.log("Response not JSON");
 }
 
