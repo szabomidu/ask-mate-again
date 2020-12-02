@@ -69,4 +69,12 @@ class QuestionQueries
                                     "id" => $id]);
     }
 
+    public static function deleteQuestion($pdo, int $id)
+    {
+        $sql = "DELETE 
+                FROM question
+                WHERE id = :id";
+        Queries::execute($pdo, $sql, ["id" => $id]);
+    }
+
 }
