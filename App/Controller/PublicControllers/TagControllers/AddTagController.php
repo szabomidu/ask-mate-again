@@ -5,11 +5,13 @@ namespace App\Controller\PublicControllers\TagControllers;
 
 
 
-class AddTagController extends \App\Controller\BaseController
+use App\Controller\BaseController;
+
+class AddTagController extends BaseController
 {
 
     public function run()
     {
-        $this->view("tags.addtag");
+        $this->view("Tags.add-tag");
     }
 }
