@@ -21,6 +21,7 @@ function validateUserInput() {
 function checkNonEmptyFields(username, password, errorContainer) {
     if (username === "" || password === "") {
         errorContainer.innerHTML = "Please fill out all fields!";
+        errorContainer.classList.add('error');
         return false;
     }
 
