@@ -10,7 +10,7 @@ use PDO;
 class TagQueries
 {
 
-  public static function getAllTags(PDO $pdo) : array
+  public static function getAllTagsWithCounter(PDO $pdo) : array
   {
       $sql = "SELECT name, count(name) as 'tag_number'
               FROM ask_mate_again.tag
@@ -26,5 +26,12 @@ class TagQueries
 				 WHERE rqt.id_question = :questionId";
 		return Queries::queryAll($pdo, $sql, ["questionId" => $questionId]);
 	}
+
+    public static function getAllTags(PDO $pdo)
+    {
+        $sql = "SELECT *
+        FROM ask_mate_again.tag";
+        return Queries::queryAll($pdo, $sql);
+    }
 
 }
