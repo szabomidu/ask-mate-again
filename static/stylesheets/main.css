@@ -1,4 +1,8 @@
 @import url(navbar.css);
+::-webkit-scrollbar {
+  display: none;
+}
+
 /********************************/
 /* Header bar with profile info */
 /********************************/
@@ -84,6 +88,24 @@ body {
   padding: 5px 15px;
   color: #eeeeee;
   background-color: #867666;
+}
+.content-table thead .id {
+  width: 88px;
+}
+.content-table thead .time {
+  width: 290px;
+}
+.content-table thead .title {
+  width: 190px;
+}
+.content-table thead .message {
+  width: 421px;
+}
+.content-table thead .img {
+  width: 143px;
+}
+.content-table thead .vote {
+  width: 231px;
 }
 .content-table tbody {
   background-color: #d5c3aa;
