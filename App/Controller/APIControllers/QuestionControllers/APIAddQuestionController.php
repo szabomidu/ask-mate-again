@@ -8,6 +8,7 @@ use App\Controller\BaseController;
 use App\Model\Question;
 use App\Queries\QuestionQueries;
 use BK_Framework\SuperGlobal\Post;
+use BK_Framework\SuperGlobal\Server;
 use BK_Framework\SuperGlobal\Session;
 
 class APIAddQuestionController extends BaseController
@@ -22,5 +23,6 @@ class APIAddQuestionController extends BaseController
 		$question = new Question($title, $message);
 		$pdo = $this->getConnection();
 		QuestionQueries::add($pdo, $question, $userId);
+		Server::redirect("/");
     }
 }

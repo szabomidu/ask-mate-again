@@ -30,4 +30,14 @@ class Server
 		return $_SERVER['REQUEST_METHOD'];
 	}
 
+	/**
+	 * @param string $path
+	 * @return string
+	 */
+	public static function redirect(string $path) : void
+	{
+		header("Location: $path");
+	}
+
+
 }
