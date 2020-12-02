@@ -3,11 +3,13 @@
 
 namespace App\Routes;
 
+use App\Controller\APIControllers\QuestionControllers\APIEditQuestionController;
 use App\Controller\PublicControllers\QuestionControllers\QuestionController;
 use App\Controller\APIControllers\QuestionControllers\APIAddQuestionController;
 use App\Controller\PublicControllers\QuestionControllers\AddQuestionController;
 use App\Controller\PublicControllers\QuestionControllers\EditQuestionController;
 use BK_Framework\Router\Router;
+use BK_Framework\SuperGlobal\Post;
 
 class QuestionRoutes implements RouteInitializer
 {
@@ -34,5 +36,14 @@ class QuestionRoutes implements RouteInitializer
             $controller = new EditQuestionController($id);
             $controller->run();
         }, "GET");
+
+        Router::add("/api/edit-question", function () {
+            $questionData = Post::requestBody();
+            $title = $questionData["title"];
+            $message = $questionData["message"];
+            $id = $_GET["id"];
+            $controller = new APIEditQuestionController($id, $title, $message);
+            $controller->run();
+        }, "PUT");
     }
 }
