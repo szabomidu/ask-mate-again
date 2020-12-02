@@ -20,6 +20,15 @@ class QuestionQueries
 		return Queries::queryAll($pdo, $sql);
 	}
 
+    public static function getQuestionDataById(PDO $pdo, int $id)
+    {
+        $sql = "SELECT id, title, message
+                FROM question
+                WHERE id = :id";
+        return Queries::queryOne($pdo, $sql, ["id"=>$id]);
+    }
+
+
 	public static function add(PDO $pdo, Question $question, string $userId) : void
 	{
 		$sql = "INSERT INTO question (id_registered_user, title, message, vote_number)
