@@ -11,7 +11,7 @@ class AddQuestionController extends BaseController
 
     public function run()
     {
-        echo "Route ready";
+		$this->view("add-question");
     }
 
 }
