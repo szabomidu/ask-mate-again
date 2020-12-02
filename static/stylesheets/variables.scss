@@ -30,7 +30,7 @@ $table-cell-background-color-light: #d5c3aa;
 
 @mixin centered-content($width) {
   width: $width;
-  margin-left: $width/2;
+  margin-left: (100 - $width)/2;
   text-align: center;
 }
 

@@ -1,0 +1,28 @@
+@import "variables";
+@import 'base';
+@import url(navbar.css);
+
+#tag-container {
+  @extend %display-flex;
+  @include centered-content(40%);
+
+  background-color: $background-color-darker;
+
+  height: 25px;
+  border-radius: 5px;
+
+  ul {
+	@extend %display-flex;
+	flex-direction: row;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+	  @extend %display-flex;
+	  flex-direction: column;
+	  margin: 20px;
+	  color: white;
+	}
+  }
+}

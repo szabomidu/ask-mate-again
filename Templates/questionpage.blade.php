@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Gamper Plumber Inc.</title>
 
-    <link rel="stylesheet" type="text/css" href="../static/stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="../static/stylesheets/question.css">
 </head>
 
 <body>
@@ -13,9 +13,9 @@
 
 <div id="tag-container">
 	@foreach($tags as $tag)
-		<div class="tag-card">
-			<p>{{$tag->get("name")}}</p>
-		</div>
+		<ul>
+			<li>{{$tag->get("name")}}</li>
+		</ul>
 	@endforeach
 </div>
 
