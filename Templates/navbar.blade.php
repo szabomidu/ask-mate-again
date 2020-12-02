@@ -19,7 +19,10 @@
             <li><a href="/all-tags">Show all tags</a></li>
         @endif
 
-        	<li><a href="/all">Show all questions</a></li>
+        @if (\BK_Framework\SuperGlobal\Server::getPath() == "/question")
+            <li><a href="/edit-question?id={{\BK_Framework\SuperGlobal\Get::get("id")}}">Edit question</a></li>
+        @endif
 
+        <li><a href="/all">Show all questions</a></li>
     </ul>
 </div>

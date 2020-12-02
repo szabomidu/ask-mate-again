@@ -49,12 +49,24 @@ class QuestionQueries
 
     public static function getAnswersToQuestionById(PDO $pdo, int $id)
     {
-	    $sql = "SELECT message,
+        $sql = "SELECT message,
                     submission_time,
                     vote_number
                 FROM answer
                 WHERE id_question = :id";
         return Queries::queryAll($pdo, $sql, ["id" => $id]);
+    }
+
+    public static function updateQuestion(PDO $pdo, int $id, string $title, string $message)
+    {
+        $sql = "UPDATE question
+                SET title = :title,
+                    message = :message
+                WHERE id = :id";
+        Queries::execute($pdo, $sql,
+                                    ["title" => $title,
+                                    "message" => $message,
+                                    "id" => $id]);
     }
 
 }
