@@ -21,14 +21,14 @@ class TagRoutes implements RouteInitializer
         }, "GET");
 
 		Router::add("/api/add-tag/([0-9]*)", function ($questionId) {
-			$controller = new APIAddNewTagController();
+			$controller = new APIAddNewTagController($questionId);
 			$controller->run();
 		}, "POST");
 
 		Router::add("/api/add-tag/([0-9]*)/([0-9]*)", function ($questionId, $tagId) {
 			$controller = new APIAddExistingTagController($questionId, $tagId);
 			$controller->run();
-		}, "GET");
+		}, "POST");
 
 		Router::add("/all-tags", function () {
 			$controller = new AllTagsController();
