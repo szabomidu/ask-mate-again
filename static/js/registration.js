@@ -23,6 +23,7 @@ function validateUserData() {
 function checkNonEmptyFields(userInput, passwordOne, passwordTwo, errorContainer) {
     if (userInput === "" || passwordOne === "" || passwordTwo === "") {
         errorContainer.innerHTML = "Please fill out all fields!";
+        errorContainer.classList.add('error');
         return false;
     }
     return true;
@@ -31,6 +32,7 @@ function checkNonEmptyFields(userInput, passwordOne, passwordTwo, errorContainer
 function checkEqualPasswords(passwordOne, passwordTwo, errorContainer) {
     if (passwordOne !== passwordTwo) {
         errorContainer.innerHTML = "Mismatched passwords!";
+        errorContainer.classList.add('error');
         return false;
     }
     return true;
