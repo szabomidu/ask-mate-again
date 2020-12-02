@@ -45,7 +45,7 @@ class Queries
 	 * place into the prepared statement
 	 * @return ResultSet
 	 */
-	public static function queryOne(PDO $pdo, string $sql, array $variables = array()): ResultSet
+	public static function queryOne(PDO $pdo, string $sql, array $variables = array()) : ?ResultSet
 	{
 		$stmt = $pdo->prepare($sql);
 		$stmt->execute($variables);
@@ -60,7 +60,7 @@ class Queries
 	 * @param string $sql
 	 * @param array $variables
 	 */
-	public static function execute(PDO $pdo, string $sql, array $variables = array()): void
+	public static function execute(PDO $pdo, string $sql, array $variables = array()) : void
 	{
 		$stmt = $pdo->prepare($sql);
 		$stmt->execute($variables);
