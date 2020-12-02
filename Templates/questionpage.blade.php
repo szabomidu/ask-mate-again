@@ -15,5 +15,12 @@
     <p>{{$questionData->get("title")}}</p>
     <p>{{$questionData->get("message")}}</p>
 </div>
+<div>
+    @foreach($answers as $answer)
+        <p>{{$answer->get("message")}}</p>
+        <p>{{$answer->get("submission_time")}}</p>
+        <p>{{$answer->get("vote_number")}}</p><br>
+    @endforeach
+</div>
 </body>
 </html>
