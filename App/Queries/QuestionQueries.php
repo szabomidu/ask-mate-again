@@ -54,7 +54,7 @@ class QuestionQueries
                     vote_number
                 FROM answer
                 WHERE id_question = :id";
-        return Queries::queryAll($pdo, $sql, ["id_question" => $id]);
+        return Queries::queryAll($pdo, $sql, ["id" => $id]);
     }
 
 }
