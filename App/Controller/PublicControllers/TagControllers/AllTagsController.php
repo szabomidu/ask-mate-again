@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Controller\PublicControllers;
+namespace App\Controller\PublicControllers\TagControllers;
 
 
 use App\Controller\BaseController;

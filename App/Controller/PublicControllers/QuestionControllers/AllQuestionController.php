@@ -1,13 +1,14 @@
 <?php
 
 
-namespace App\Controller\PublicControllers;
+namespace App\Controller\PublicControllers\QuestionControllers;
 
 
+use App\Controller\BaseController;
 use App\Queries\QuestionQueries;
 use BK_Framework\Database\Connection\Connection;
 
-class AllQuestionController extends \App\Controller\BaseController
+class AllQuestionController extends BaseController
 {
 
     /**
