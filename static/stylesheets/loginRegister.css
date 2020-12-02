@@ -1,10 +1,10 @@
-.form, body {
+.form .error, .form .content, .form, body {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.form, body {
+.form .error, .form .content, .form, body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,21 +25,73 @@ body {
   justify-content: center;
 }
 
+.form .submit button[type=submit], .form .error, .form .content input {
+  background: none;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  padding: 14px 10px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
 html {
   height: 100%;
 }
 
 body {
   height: 100%;
+  overflow: hidden;
 }
 
 .form {
   flex-direction: column;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 550px;
   background-color: #867666;
   text-align: center;
   border-radius: 50px;
+}
+.form .title {
+  margin-bottom: 40px;
+}
+.form .title h1 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: #867666;
+}
+.form .content {
+  flex-direction: column;
+}
+.form .content input {
+  border: 2px solid #b7950a;
+  width: 200px;
+  color: #eeeeee;
+}
+.form .content input::placeholder {
+  color: #eeeeee;
+}
+.form .content input:focus {
+  width: 280px;
+  border-color: #34495e;
+}
+.form .error {
+  flex-direction: column;
+  border: 2px solid #a50000;
+  width: 300px;
+  border-radius: 24px;
+  color: #eeeeee;
+}
+.form .submit button[type=submit] {
+  width: 100px;
+  border: 2px solid #2ecc71;
+  color: #eeeeee;
+  cursor: pointer;
+}
+.form .submit button[type=submit]:hover {
+  background: #2ecc71;
 }
 
 /*# sourceMappingURL=loginRegister.css.map */

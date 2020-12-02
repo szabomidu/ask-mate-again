@@ -1,21 +1,89 @@
 @import 'variables';
 @import 'base';
 
+%common {
+  background: none;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  padding: 14px 10px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
 html {
   height: 100%;
 }
 
 body {
   height: 100%;
+  overflow: hidden;
   @extend %display-flex;
 }
 
 .form {
   @extend %display-flex;
   flex-direction: column;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 550px;
   background-color: $background-color-darker;
   text-align: center;
   border-radius: 50px;
+
+  .title {
+    margin-bottom: 40px;
+
+    h1 {
+      color: white;
+      text-transform: uppercase;
+      font-weight: 500;
+      background: #867666;
+    }
+  }
+
+  .content {
+    @extend %display-flex;
+    flex-direction: column;
+
+    input {
+      @extend %common;
+      border: 2px solid #b7950a;
+      width: 200px;
+      color: $text-color-light;
+    }
+
+    input::placeholder {
+      color: $text-color-light;
+    }
+
+    input:focus {
+      width: 280px;
+      border-color: #34495e;
+    }
+  }
+
+  .error {
+    @extend %common;
+    @extend %display-flex;
+    flex-direction: column;
+    border: 2px solid rgb(165, 0, 0);
+    width: 300px;
+    border-radius: 24px;
+    color: $text-color-light;
+  }
+
+  .submit {
+    button[type = "submit"] {
+      @extend %common;
+      width: 100px;
+      border: 2px solid #2ecc71;
+      color: $text-color-light;
+      cursor: pointer;
+    }
+
+    button[type = "submit"]:hover {
+      background: #2ecc71;
+    }
+  }
 }
