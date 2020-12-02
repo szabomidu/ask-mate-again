@@ -5,6 +5,8 @@ namespace App\Controller\APIControllers\TagControllers;
 
 
 use App\Controller\BaseController;
+use App\Queries\TagQueries;
+use BK_Framework\Database\Connection\Connection;
 
 class APIAddExistingTagController extends BaseController
 {
@@ -26,6 +28,8 @@ class APIAddExistingTagController extends BaseController
 
 	public function run()
 	{
+		$pdo = Connection::getConnection(self::$dbConfig);
+		TagQueries::addExistingTagToQuestion($pdo, $this->questionId, $this->tagId);
 		echo "Existing tag has been added to question $this->questionId with id $this->tagId";
 	}
 }

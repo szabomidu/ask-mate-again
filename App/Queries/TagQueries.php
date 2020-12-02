@@ -17,7 +17,7 @@ class TagQueries
               GROUP BY name";
       return Queries::queryAll($pdo, $sql);
   }
-  
+
 	public static function getByQuestionId(PDO $pdo, string $questionId) : array
 	{
 		$sql = "SELECT id, name
@@ -30,8 +30,16 @@ class TagQueries
     public static function getAllTags(PDO $pdo)
     {
         $sql = "SELECT *
-        FROM ask_mate_again.tag";
+        		FROM ask_mate_again.tag";
         return Queries::queryAll($pdo, $sql);
     }
+
+    public static function addExistingTagToQuestion(PDO $pdo, string $questionId, string $tagId) : void
+	{
+		$sql = "INSERT INTO rel_question_tag (id_question, id_tag)
+				VALUES (:questionId, :tagId)";
+		Queries::execute($pdo, $sql, ["questionId"=>$questionId, "tagId"=>$tagId]);
+	}
+
 
 }
