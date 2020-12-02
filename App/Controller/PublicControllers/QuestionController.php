@@ -6,6 +6,7 @@ namespace App\Controller\PublicControllers;
 
 use App\Controller\BaseController;
 use App\Queries\QuestionQueries;
+use App\Queries\TagQueries;
 use BK_Framework\Database\Connection\Connection;
 
 class QuestionController extends BaseController
@@ -28,6 +29,7 @@ class QuestionController extends BaseController
         $pdo = Connection::getConnection(self::$dbConfig);
         $questionData = QuestionQueries::getQuestionDataById($pdo, $this->id);
         $answers = QuestionQueries::getAnswersToQuestionById($pdo, $this->id);
-        $this->view("questionpage", ["questionData"=>$questionData, "answers"=>$answers]);
+        $tags = TagQueries::getByQuestionId($pdo, $this->id);
+        $this->view("questionpage", ["questionData"=>$questionData, "tags"=>$tags, "answers"=>$answers]);
     }
 }
