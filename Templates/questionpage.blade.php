@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Gamper Plumber Inc.</title>
 
-    <link rel="stylesheet" type="text/css" href="../../static/stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="../static/stylesheets/main.css">
 </head>
 
 <body>
@@ -12,10 +12,8 @@
 @include("navbar")
 
 <div>
-
-                <p>{{$questionData->get("title")}}</p>
-                <p>{{$questionData->get("message")}}</p>
-
+    <p>{{$questionData->get("title")}}</p>
+    <p>{{$questionData->get("message")}}</p>
 </div>
 </body>
 </html>

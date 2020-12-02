@@ -17,7 +17,6 @@ class QuestionRoutes implements RouteInitializer
             $controller = new QuestionController($id);
             $controller->run();
         }, "GET");
-    }
     
   	Router::add("/add-question", function () {
 			$controller = new AddQuestionController();
@@ -28,6 +27,5 @@ class QuestionRoutes implements RouteInitializer
 			$controller = new APIAddQuestionController();
 			$controller->run();
 		}, "POST");
-
 	}
 }
