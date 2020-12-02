@@ -1,6 +1,9 @@
 <header class="profile-bar" id="profile_bar">
-	<p>THIS IS WHERE PROFILE DATA WILL BE SHOWN</p>
-	@if(\BK_Framework\SuperGlobal\Session::isLoggedIn())
-		<a href="/logout">Logout</a>
+	@if (\BK_Framework\SuperGlobal\Session::isLoggedIn())
+		<div class="header-links">
+			<a href="/register">My Profile</a>
+			<div class="logged-in">You are logged in as: {{ \BK_Framework\SuperGlobal\Session::get('userName') }}</div>
+			<a href="/logout">Logout</a>
+		</div>
 	@endif
 </header>
