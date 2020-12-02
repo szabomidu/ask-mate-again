@@ -68,14 +68,15 @@
 
 	.description {
 		width: 95%;
-		min-height: 280px;
+		min-height: 340px;
 		color: $text-color-light;
 		text-align: justify;
 		font-size: 25px;
 	}
 
 	.links {
-		bottom: 0;
+		@extend %display-flex;
+		justify-content: flex-end;
 		margin-bottom: 20px;
 
 		a {
