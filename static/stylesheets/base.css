@@ -1,0 +1,16 @@
+body {
+  background-color: #eae2d6;
+}
+
+.profile-bar {
+  background-color: #b7950a;
+  color: #eeeeee;
+  height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=base.css.map */
