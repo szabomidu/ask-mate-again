@@ -5,6 +5,7 @@ namespace App\Routes;
 
 
 use App\Controller\APIControllers\UserSystemControllers\APIRegistrationController;
+use App\Controller\APIControllers\UserSystemControllers\LogoutController;
 use App\Controller\PublicControllers\UserSystemControllers\RegistrationController;
 use App\Exception\InvalidRegistrationException;
 use App\Model\User;
@@ -38,6 +39,11 @@ class UserSystemRoutes implements RouteInitializer
 			}
 
 		}, "POST");
+
+		Router::add("/logout", function () {
+			$controller = new LogoutController();
+			$controller->run();
+		}, "GET");
 
 	}
 
