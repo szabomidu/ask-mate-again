@@ -37,15 +37,14 @@ function checkEqualPasswords(passwordOne, passwordTwo, errorContainer) {
 }
 
 function redirectToMainPage(data) {
-
-	if (data["state"] === "success") {
-		//TODO: waiting before redirection
-		window.location.replace("/");
-	}
-	else if (data["state"] === "taken") {
-		document.querySelector("#error-message").innerHTML = "Username is already taken";
-	}
-
+    if (data["state"] === "success") {
+        document.querySelector("body").innerHTML = "Successful registration, redirecting to main page..."
+        setTimeout(() => {
+            window.location.replace("/")
+        }, 2500)
+    } else if (data["state"] === "taken") {
+        document.querySelector("#error-message").innerHTML = "Username is already taken";
+    }
 }
 
 function displayErrorMessages() {
