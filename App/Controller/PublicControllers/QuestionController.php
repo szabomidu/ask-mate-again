@@ -27,6 +27,7 @@ class QuestionController extends BaseController
         session_start();
         $pdo = Connection::getConnection(self::$dbConfig);
         $questionData = QuestionQueries::getQuestionDataById($pdo, $this->id);
-        $this->view("questionpage", ["questionData"=>$questionData]);
+        $answers = QuestionQueries::getAnswersToQuestionById($pdo, $this->id);
+        $this->view("questionpage", ["questionData"=>$questionData, "answers"=>$answers]);
     }
 }
