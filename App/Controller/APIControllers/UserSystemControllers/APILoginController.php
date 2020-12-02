@@ -36,6 +36,7 @@ class APILoginController extends BaseController {
             if (UserQueries::checkIfUsernameValid($pdo, self::$username, self::$password)) {
                 $userId = UserQueries::getUserIdByUsername($pdo, self::$username);
                 Session::login($userId);
+                Session::set('userName', self::$username);
                 echo JSON::encode(["state" => "success"]);
             } else {
                 throw new InvalidLoginException("Username is invalid");
