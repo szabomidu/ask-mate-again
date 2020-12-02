@@ -20,7 +20,6 @@ class AllQuestionController extends \App\Controller\BaseController
 
     public function run()
     {
-        session_start();
         $pdo = Connection::getConnection(self::$dbConfig);
         $questions = QuestionQueries::getAllQuestions($pdo);
         $this->view("all", ["questions"=>$questions]);

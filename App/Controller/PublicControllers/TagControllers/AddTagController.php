@@ -14,7 +14,6 @@ class AddTagController extends BaseController
 
     public function run()
     {
-        session_start();
         $pdo = Connection::getConnection(self::$dbConfig);
         $tags = TagQueries::getAllTags($pdo);
         $this->view("Tags.add-tag", ["tags"=>$tags]);

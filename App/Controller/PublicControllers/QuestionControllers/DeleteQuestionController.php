@@ -26,7 +26,6 @@ class DeleteQuestionController extends BaseController
 
     public function run()
     {
-        session_start();
         $pdo = Connection::getConnection(self::$dbConfig);
         QuestionQueries::deleteQuestion($pdo, $this->id);
         Server::redirect("/all");

@@ -23,7 +23,6 @@ class EditQuestionController extends BaseController
 
     public function run()
     {
-        session_start();
         $pdo = Connection::getConnection(self::$dbConfig);
         $questionData = QuestionQueries::getQuestionDataById($pdo, $this->id);
         $this->view("Questions.edit-question", ["questionData"=>$questionData]);

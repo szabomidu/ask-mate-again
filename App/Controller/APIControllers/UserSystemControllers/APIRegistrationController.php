@@ -34,7 +34,6 @@ class APIRegistrationController extends BaseController
 	 */
 	public function run()
 	{
-		session_start();
 		$pdo = Connection::getConnection(self::$dbConfig);
 		if (UserQueries::checkIfUsernameExists($pdo, self::$user)) {
 			throw new InvalidRegistrationException("Username is already taken");

@@ -21,7 +21,6 @@ class AllTagsController extends BaseController
 
     public function run()
     {
-        session_start();
         $pdo = Connection::getConnection(self::$dbConfig);
         $tags = TagQueries::getAllTagsWithCounter($pdo);
         $this->view("all-tags", ["tags"=>$tags]);

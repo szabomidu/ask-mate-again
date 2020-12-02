@@ -16,7 +16,6 @@ class APIAddQuestionController extends BaseController
 
     public function run()
     {
-    	session_start();
     	$userId = Session::get("userId");
 		$title = Post::get("title");
 		$message = Post::get("message");
