@@ -1,7 +1,7 @@
 .navbar ul li, .navbar ul, .navbar {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 .navbar ul li, .navbar ul, .navbar {
