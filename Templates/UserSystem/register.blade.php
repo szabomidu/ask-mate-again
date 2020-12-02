@@ -12,14 +12,14 @@
 	<div class="leaves">
 		<section>
 			<div class="set">
-				<div><img src="../../static/pictures/gardening-1.png"></div>
-				<div><img src="../../static/pictures/gardening-5.png"></div>
-				<div><img src="../../static/pictures/gardening-3.png"></div>
-				<div><img src="../../static/pictures/gardening-4.png"></div>
-				<div><img src="../../static/pictures/gardening-5.png"></div>
-				<div><img src="../../static/pictures/gardening-2.png"></div>
-				<div><img src="../../static/pictures/gardening-3.png"></div>
-				<div><img src="../../static/pictures/gardening-4.png"></div>
+				<div><img src="../../static/pictures/plumber-1.png"></div>
+				<div><img src="../../static/pictures/plumber-5.png"></div>
+				<div><img src="../../static/pictures/plumber-3.png"></div>
+				<div><img src="../../static/pictures/plumber-4.png"></div>
+				<div><img src="../../static/pictures/plumber-5.png"></div>
+				<div><img src="../../static/pictures/plumber-2.png"></div>
+				<div><img src="../../static/pictures/plumber-3.png"></div>
+				<div><img src="../../static/pictures/plumber-4.png"></div>
 			</div>
 		</section>
 	</div>
