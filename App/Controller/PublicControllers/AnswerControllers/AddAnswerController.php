@@ -4,11 +4,14 @@
 namespace App\Controller\PublicControllers\AnswerControllers;
 
 
-class AddAnswerController extends \App\Controller\BaseController
+use App\Controller\BaseController;
+
+class AddAnswerController extends BaseController
 {
 
     public function run()
     {
+    	session_start();
         $this->view("Answers.add-answer");
     }
 }
