@@ -9,10 +9,9 @@ use App\Controller\BaseController;
 class AddQuestionController extends BaseController
 {
 
-
-
     public function run()
     {
-        // TODO: Implement run() method.
+        echo "Route ready";
     }
+
 }
