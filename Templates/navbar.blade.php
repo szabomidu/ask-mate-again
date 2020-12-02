@@ -14,6 +14,7 @@
 
         @if (\BK_Framework\SuperGlobal\Session::isLoggedIn())
             <li><a href="/tags">Tags</a></li>
+            <li><a href="/addtag">Add tag</a></li>
             <li><a href="/add-question">Add question</a></li>
         @endif
 

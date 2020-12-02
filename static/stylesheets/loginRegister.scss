@@ -35,10 +35,10 @@ body {
     margin-bottom: 40px;
 
     h1 {
-      color: white;
+      color: $text-color-light;
       text-transform: uppercase;
       font-weight: 500;
-      background: #867666;
+      background: $background-color-darker;
     }
   }
 
@@ -48,7 +48,7 @@ body {
 
     input {
       @extend %common;
-      border: 2px solid #b7950a;
+      border: 2px solid $background-color-lighter;
       width: 200px;
       color: $text-color-light;
     }
@@ -77,13 +77,13 @@ body {
     button[type = "submit"] {
       @extend %common;
       width: 100px;
-      border: 2px solid #2ecc71;
+      border: 2px solid $success;
       color: $text-color-light;
       cursor: pointer;
     }
 
     button[type = "submit"]:hover {
-      background: #2ecc71;
+      background: $success;
     }
   }
 }

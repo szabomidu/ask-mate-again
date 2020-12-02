@@ -35,6 +35,7 @@ function redirectToMainPage(data) {
     }
     else if (data["state"] === "invalid") {
         document.querySelector("#error-message").innerHTML = "Invalid username or password!";
+        document.querySelector("#error-message").classList.add('error');
     }
 }
 

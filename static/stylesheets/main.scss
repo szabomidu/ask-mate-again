@@ -78,3 +78,22 @@
     text-align: center;
   }
 }
+
+
+/*********/
+/* Links */
+/*********/
+a {
+  text-decoration: none;
+  color: $background-color-lighter;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $hover-color;
+}
+
+a:visited {
+  text-decoration: none;
+  color: $background-color-darker;
+}
