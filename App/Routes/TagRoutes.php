@@ -4,6 +4,7 @@
 namespace App\Routes;
 
 
+use App\Controller\PublicControllers\AllTagsController;
 use App\Controller\PublicControllers\TagControllers\AddTagController;
 use BK_Framework\Router\Router;
 
@@ -16,5 +17,11 @@ class TagRoutes implements RouteInitializer
             $controller = new AddTagController();
             $controller->run();
         }, "GET");
+
+		Router::add("/all-tags", function () {
+			$controller = new AllTagsController();
+			$controller->run();
+		}, "GET");
+
     }
 }

@@ -12,7 +12,7 @@
 
 	<select name="tags" id="tags">
 		@foreach($tags as $tag)
-			<option value="{{$tag->get("name")}}"></option>
+			<option value="{{$tag->get("id")}}">{{$tag->get("name")}}</option>
 		@endforeach
 	</select>
 
