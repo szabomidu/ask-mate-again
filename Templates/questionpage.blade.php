@@ -20,6 +20,7 @@
 </div>
 
 <div>
+    <a href="/add-tag/{{$questionData->get("id")}}">Add tag</a>
     <p>{{$questionData->get("title")}}</p>
     <p>{{$questionData->get("message")}}</p>
 </div>
