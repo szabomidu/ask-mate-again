@@ -67,13 +67,6 @@ body {
   overflow: hidden;
 }
 
-#tag-input-button {
-  background-color: #2ecc71;
-}
-#tag-select-button {
-  background-color: #b7950a;
-}
-
 .form {
   flex-direction: column;
   width: 500px;
@@ -108,7 +101,7 @@ body {
 }
 .form .error {
   flex-direction: column;
-  border: 2px solid #a50000;
+  border: 3px solid #a50000;
   width: 300px;
   border-radius: 24px;
   color: #eeeeee;
@@ -123,11 +116,21 @@ body {
   background: #2ecc71;
 }
 
+#tag-input-button {
+  background-color: #2ecc71;
+}
+
+#tag-select-button {
+  background-color: #b7950a;
+}
+
 .hide-both {
   visibility: hidden;
 }
 
-.hide-item {visibility: hidden}
+.hide-item {
+  visibility: hidden;
+}
 
 .display-item {
   visibility: visible;
