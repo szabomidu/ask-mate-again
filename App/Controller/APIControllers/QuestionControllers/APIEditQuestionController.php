@@ -32,7 +32,6 @@ class APIEditQuestionController extends BaseController
 
     public function run()
     {
-        session_start();
         $pdo = Connection::getConnection(self::$dbConfig);
         QuestionQueries::updateQuestion($pdo, $this->id, $this->title, $this->message);
         echo JSON::encode(["state"=>"success", "id" => $this->id]);

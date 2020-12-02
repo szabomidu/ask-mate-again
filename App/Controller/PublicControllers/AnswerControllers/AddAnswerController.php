@@ -23,7 +23,6 @@ class AddAnswerController extends BaseController
 
 	public function run()
     {
-    	session_start();
         $this->view("Answers.add-answer", ["questionId"=>$this->questionId]);
     }
 }

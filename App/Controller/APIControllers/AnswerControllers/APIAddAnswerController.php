@@ -28,7 +28,6 @@ class APIAddAnswerController extends BaseController
 
 	public function run()
     {
-        session_start();
 		$userId = Session::get("userId");
 		$message = Post::get("message");
 		$pdo = $this->getConnection();

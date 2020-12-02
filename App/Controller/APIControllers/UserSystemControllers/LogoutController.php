@@ -13,7 +13,6 @@ class LogoutController extends BaseController
 
 	public function run()
 	{
-		session_start();
 		Session::logout();
 		Server::redirect("/");
 	}

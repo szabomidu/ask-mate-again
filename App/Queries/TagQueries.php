@@ -31,7 +31,7 @@ class TagQueries
               GROUP BY name";
         return Queries::queryAll($pdo, $sql);
     }
-  
+
 	public static function getByQuestionId(PDO $pdo, string $questionId) : array
 	{
 		$sql = "SELECT id, name
@@ -54,6 +54,14 @@ class TagQueries
                 FROM rel_question_tag
                 WHERE id_question = :questionId AND id_tag = :tagId";
         Queries::execute($pdo, $sql, ["questionId" => $questionId, "tagId" => $tagId]);
+    }
+
+    public static function deleteByQuestionId(PDO $pdo, int $id)
+    {
+		$sql = "DELETE
+                FROM rel_question_tag
+                WHERE id_question = :id";
+		Queries::execute($pdo, $sql, ["id" => $id]);
     }
 
 }
