@@ -34,7 +34,7 @@ class TagQueries
         return Queries::queryAll($pdo, $sql);
     }
 
-    public static function addExistingTagToQuestion(PDO $pdo, string $questionId, string $tagId) : void
+    public static function addTagToQuestion(PDO $pdo, string $questionId, string $tagId) : void
 	{
 		$sql = "INSERT INTO rel_question_tag (id_question, id_tag)
 				VALUES (:questionId, :tagId)";
