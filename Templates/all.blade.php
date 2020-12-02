@@ -12,8 +12,8 @@
 
 <div class="welcome-text">
     <h1 class="main-text">Welcome to the Gamper Plumber Inc. by Crosswalk Transform</h1>
-    <h2 class="text"> On this page you can see all questions on this website, <br>
-        feel free to search between among us...</h2>
+    <h2 class="text"> On this page you can see all asked questions connecting to plumbing issues, <br>
+        feel free to search among us...</h2>
 </div>
 
 @include("navbar")
