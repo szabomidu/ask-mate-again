@@ -16,8 +16,10 @@
             <li><a href="/tags">Tags</a></li>
             <li><a href="/addtag">Add tag</a></li>
             <li><a href="/add-question">Add question</a></li>
+            <li><a href="/all-tags">Show all tags</a></li>
         @endif
 
         	<li><a href="/all">Show all questions</a></li>
+
     </ul>
 </div>
