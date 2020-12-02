@@ -20,9 +20,14 @@ class QuestionQueries
 		return Queries::queryAll($pdo, $sql);
 	}
 
-	public static function add(Question $question)
+	public static function add(PDO $pdo, Question $question, string $userId) : void
 	{
+		$sql = "INSERT INTO question (id_registered_user, title, message, vote_number)
+				VALUES (:userId, :title, :message, 0)";
 
+		Queries::execute($pdo, $sql, ["userId"=>$userId,
+									"title"=>$question->getTitle(),
+									"message"=>$question->getMessage()]);
 	}
 
 }
