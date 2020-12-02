@@ -24,6 +24,28 @@ body {
   align-content: center;
   justify-content: center;
 }
+.profile-bar .header-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+}
+.profile-bar .header-links .logged-in {
+  font-size: 20px;
+  color: #eeeeee;
+}
+.profile-bar .header-links a {
+  color: #eeeeee;
+  border-radius: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 5px 30px;
+}
+.profile-bar .header-links a:hover {
+  color: #474747;
+  background-color: #eae2d6;
+}
 
 .answers, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
   display: flex;
@@ -144,12 +166,15 @@ body {
 
 .answers {
   flex-direction: column;
+  position: relative;
   margin: 20px 10px;
   min-height: 400px;
   background-color: #867666;
   border-radius: 10px;
 }
 .answers h1 {
+  position: absolute;
+  top: 0;
   padding: 10px 0;
   text-align: center;
   color: #eeeeee;

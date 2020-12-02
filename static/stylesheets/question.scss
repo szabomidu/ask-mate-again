@@ -97,6 +97,7 @@
 .answers {
 	@extend %display-flex;
 	flex-direction: column;
+	position: relative;
 
 	margin: 20px 10px;
 	min-height: 400px;
@@ -104,6 +105,8 @@
 	border-radius: 10px;
 
 	h1 {
+		position: absolute;
+		top: 0;
 		padding: 10px 0;
 		text-align: center;
 		color: $text-color-light;
