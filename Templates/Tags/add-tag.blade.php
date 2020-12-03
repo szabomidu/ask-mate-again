@@ -11,18 +11,20 @@
 	<div class="title"><h1>Add tag</h1></div>
 
 	@if(0 < count($tags))
-		<button id="tag-input-button">Add new tag</button>
-		<button id="tag-select-button">Select from existing tags</button>
+		<button class="tag-button" id="tag-input-button">Add new tag</button>
+		<button class="tag-button active" id="tag-select-button">Select from existing tags</button>
 
-		<select name="tags" id="tags">
-			@foreach($tags as $tag)
-				<option value="{{$tag->get("id")}}">{{$tag->get("name")}}</option>
-			@endforeach
-		</select>
+		<div class="box">
+			<select name="tags" id="tags">
+				@foreach($tags as $tag)
+					<option value="{{$tag->get("id")}}">{{$tag->get("name")}}</option>
+				@endforeach
+			</select>
+		</div>
 	@endif
 
-	<input id="tag-input-field" type="text" placeholder="Custom Tag"
-		   @if(0 < count($tags))class="hide-both"@endif>
+	<input id="tag-input-field" type="text" placeholder="Custom Tag" @if(0 < count($tags))class="hide-both"@endif>
+
 	<div class="submit">
 		<button type="submit" id="submit-button">Add</button>
 	</div>

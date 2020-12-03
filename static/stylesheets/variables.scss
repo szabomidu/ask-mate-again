@@ -14,11 +14,13 @@ $table-cell-background-color-light: #d5c3aa;
 }
 
 %standard-input-field {
-  background-color: $background-color-darker;
+  background-color: $background-color-lighter;
   border-radius: 10px;
-  border: 2px solid $text-color-dark;
+  border: 2px solid wheat;
   color: $text-color-light;
-  width: 300px;
+  font-size: 15px;
+  height: 22px;
+  width: 187px;
   padding: 5px;
   outline: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
