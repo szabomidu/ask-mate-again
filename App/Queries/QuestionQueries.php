@@ -49,7 +49,8 @@ class QuestionQueries
 
     public static function getAnswersToQuestionById(PDO $pdo, int $id)
     {
-        $sql = "SELECT message,
+        $sql = "SELECT id, 
+                    message,
                     submission_time,
                     vote_number
                 FROM answer

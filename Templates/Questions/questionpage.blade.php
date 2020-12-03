@@ -55,7 +55,7 @@
                 <div class="votes">
                     <p>{{$answer->get("vote_number")}} people likes this answer.</p>
                 </div>
-                <a href="/edit-question?id={{\BK_Framework\SuperGlobal\Get::get("id")}}">Edit answer not working</a>
+                <a href="/edit-answer?id={{$answer->get("id")}}&questionId={{\BK_Framework\SuperGlobal\Get::get("id")}}">Edit answer not working</a>
                 <a href="/delete-question?id={{\BK_Framework\SuperGlobal\Get::get("id")}}">Delete answer not working</a>
             </div>
             <div class="answer-message">
