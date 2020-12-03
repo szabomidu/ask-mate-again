@@ -32,7 +32,7 @@ function checkNonEmptyFields(title, message, errorContainer) {
 function redirectToMainPage(data) {
     if (data["state"] === "success") {
         document.querySelector("body").innerHTML = "<p class='redirect'> Successful editing, redirecting to question page... </p>"
-        setTimeout(() => {window.location.replace("/question?id=" + data["id"])}, 2500)
+        setTimeout(() => {window.location.replace("/question?id=" + data["id"])}, 1500)
     }
     else if (data["state"] === "failed") {
         const errorContainer = document.querySelector("#error-container");
