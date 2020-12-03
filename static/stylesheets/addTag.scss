@@ -1,0 +1,69 @@
+@import "variables";
+@import "base";
+
+%tag-button {
+  background-color: $background-color-lighter;
+  border: 1px solid wheat;
+  cursor: pointer;
+  width: 200px;
+  height: 35px;
+  margin: 10px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  @extend %display-flex;
+}
+
+.form {
+  @extend %form;
+
+  .content input {
+    @extend %common;
+  }
+
+  .error {
+    @extend %common;
+  }
+
+  .submit {
+    button[type = "submit"] {
+      @extend %common;
+    }
+  }
+}
+
+#tag-input-button {
+  @extend %tag-button;
+}
+
+#tag-select-button {
+  @extend %tag-button;
+}
+
+#tag-select-button:hover, #tag-input-button:hover {
+  background-color: $background-color-darker;
+}
+
+.hide-both {
+  visibility: hidden;
+}
+
+#tag-input-field {
+  @extend %standard-input-field;
+}
+
+#tags {
+  background-color: $table-cell-background-color-light;
+  border-radius: 5px;
+}

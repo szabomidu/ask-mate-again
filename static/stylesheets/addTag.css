@@ -4,6 +4,11 @@ body, .form .error, .form .content, .form {
   align-items: center;
 }
 
+#tag-input-field {
+  background-color: #d5c3aa;
+  border-radius: 5px;
+}
+
 .form {
   flex-direction: column;
   width: 500px;
@@ -68,6 +73,11 @@ body, .form, .form .content, .form .error {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#tag-input-field {
+  background-color: #d5c3aa;
+  border-radius: 5px;
 }
 
 .form {
@@ -167,6 +177,20 @@ body {
   background-color: #eae2d6;
 }
 
+#tag-select-button, #tag-input-button {
+  background-color: #b7950a;
+  border: 1px solid wheat;
+  cursor: pointer;
+  width: 200px;
+  height: 35px;
+  margin: 10px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
 html {
   height: 100%;
 }
@@ -176,4 +200,17 @@ body {
   overflow: hidden;
 }
 
-/*# sourceMappingURL=loginRegister.css.map */
+#tag-select-button:hover, #tag-input-button:hover {
+  background-color: #867666;
+}
+
+.hide-both {
+  visibility: hidden;
+}
+
+#tags {
+  background-color: #d5c3aa;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=addTag.css.map */
