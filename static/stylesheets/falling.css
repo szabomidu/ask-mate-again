@@ -64,6 +64,18 @@
     animation-delay: -4s;
 }
 
+.set div:nth-child(9) {
+    left: 73%;
+    animation: leaf1 6s linear infinite;
+    animation-delay: -2s;
+}
+
+.set div:nth-child(10) {
+    left: 13%;
+    animation: leaf1 8s linear infinite;
+    animation-delay: -1s;
+}
+
 
 @keyframes leaf1
 {
@@ -79,7 +91,7 @@
     }
     20%
     {
-        transform: translateX(-10px) rotate(45deg);
+        transform: translateX(-10px) rotate(-45deg);
     }
     40%
     {
@@ -87,11 +99,11 @@
     }
     60%
     {
-        transform: translateX(10px) rotate(135deg);
+        transform: translateX(10px) rotate(-135deg);
     }
     80%
     {
-        transform: translateX(-10px) rotate(180deg);
+        transform: translateX(10px) rotate(180deg);
     }
     100%
     {

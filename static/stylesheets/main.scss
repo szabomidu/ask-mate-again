@@ -112,15 +112,10 @@
 /*********/
 a {
   text-decoration: none;
-  color: $background-color-lighter;
+  color: $background-color-darker;
 }
 
 a:hover {
   text-decoration: none;
-  color: $hover-color;
-}
-
-a:visited {
-  text-decoration: none;
-  color: $background-color-darker;
+  color: $success;
 }

@@ -125,17 +125,12 @@ body {
 /*********/
 a {
   text-decoration: none;
-  color: #b7950a;
+  color: #867666;
 }
 
 a:hover {
   text-decoration: none;
-  color: #e20505;
-}
-
-a:visited {
-  text-decoration: none;
-  color: #867666;
+  color: #2ecc71;
 }
 
 /*# sourceMappingURL=main.css.map */

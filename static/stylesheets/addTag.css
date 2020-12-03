@@ -4,6 +4,19 @@ body, .form .error, .form .content, .form {
   align-items: center;
 }
 
+#tag-input-field {
+  background-color: #c6ad87;
+  border-radius: 10px;
+  border: 2px solid wheat;
+  color: #474747;
+  font-size: 15px;
+  height: 22px;
+  width: 187px;
+  padding: 5px;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
 .form {
   flex-direction: column;
   width: 500px;
@@ -68,6 +81,19 @@ body, .form, .form .content, .form .error {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#tag-input-field {
+  background-color: #c6ad87;
+  border-radius: 10px;
+  border: 2px solid wheat;
+  color: #474747;
+  font-size: 15px;
+  height: 22px;
+  width: 187px;
+  padding: 5px;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 .form {
@@ -167,6 +193,24 @@ body {
   background-color: #eae2d6;
 }
 
+.tag-button {
+  background-color: #c6ad87;
+  border: 1px solid wheat;
+  cursor: pointer;
+  width: 200px;
+  height: 35px;
+  margin: 10px 10px 20px 10px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+::placeholder {
+  color: #eeeeee;
+}
+
 html {
   height: 100%;
 }
@@ -176,4 +220,35 @@ body {
   overflow: hidden;
 }
 
-/*# sourceMappingURL=loginRegister.css.map */
+.form .submit button[type=submit] {
+  margin-top: 50px;
+}
+
+.hide-both {
+  display: none;
+  visibility: hidden;
+}
+
+.box select {
+  background-color: #c6ad87;
+  color: #eeeeee;
+  padding: 6px;
+  height: 35px;
+  width: 200px;
+  border: 2px solid wheat;
+  font-size: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  outline: none;
+  border-radius: 10px;
+}
+
+.box select option {
+  padding: 30px;
+}
+
+.active {
+  background-color: #2ecc71;
+}
+
+/*# sourceMappingURL=addTag.css.map */

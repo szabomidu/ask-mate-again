@@ -45,7 +45,12 @@
 
 
 <div class="answers">
-    <h1>Answers for this question:</h1>
+    @if (count($answers) > 0)
+        <h1>Answers for this question:</h1>
+    @else
+        <h1>There are no answers for this questions. Be the first one to answer!</h1>
+    @endif
+
     @foreach($answers as $answer)
         <div class="answer">
             <div class="answer-infos">
@@ -55,8 +60,8 @@
                 <div class="votes">
                     <p>{{$answer->get("vote_number")}} people likes this answer.</p>
                 </div>
-                <a href="/edit-answer?id={{$answer->get("id")}}&questionId={{\BK_Framework\SuperGlobal\Get::get("id")}}">Edit answer not working</a>
-                <a href="/delete-question?id={{\BK_Framework\SuperGlobal\Get::get("id")}}">Delete answer not working</a>
+                <a href="/edit-answer?id={{$answer->get("id")}}&questionId={{\BK_Framework\SuperGlobal\Get::get("id")}}">Edit answer</a>
+                <p data-answerid="{{$answer->get("id")}}" class="delete-answer-button">Delete answer</p>
             </div>
             <div class="answer-message">
                 <p>{{$answer->get("message")}}</p>
