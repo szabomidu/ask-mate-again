@@ -26,6 +26,17 @@ input[type=submit] {
   border: 2px solid #474747;
 }
 
+.container .error {
+  background: none;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  padding: 14px 10px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
 /********************************/
 /* Header bar with profile info */
 /********************************/
@@ -54,6 +65,17 @@ input[type=submit] {
   text-align: center;
   border-radius: 5px;
   border: 2px solid #474747;
+}
+
+.container .error {
+  background: none;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  padding: 14px 10px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
 }
 
 body {
@@ -111,6 +133,11 @@ body {
   margin: 30px auto;
   padding: 20px;
   height: 400px;
+}
+.container .error {
+  border: 2px solid #e20505;
+  border-radius: 10px;
+  color: #474747;
 }
 
 h1 {
