@@ -43,7 +43,7 @@ function redirectToMainPage(data) {
         document.querySelector("body").innerHTML = "Successful registration, redirecting to main page..."
         setTimeout(() => {
             window.location.replace("/")
-        }, 2500)
+        }, 1000)
     } else if (data["state"] === "taken") {
         document.querySelector("#error-message").innerHTML = "Username is already taken";
         document.querySelector("#error-message").classList.add('error');
