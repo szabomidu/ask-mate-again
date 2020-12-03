@@ -6,7 +6,6 @@ namespace App\Controller\APIControllers\AnswerControllers;
 
 use App\Controller\BaseController;
 use App\Queries\AnswerQueries;
-use App\Queries\QuestionQueries;
 use BK_Framework\Database\Connection\Connection;
 use BK_Framework\Helper\JSON;
 

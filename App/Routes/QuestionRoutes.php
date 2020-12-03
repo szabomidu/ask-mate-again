@@ -50,7 +50,7 @@ class QuestionRoutes implements RouteInitializer
             $questionData = Post::requestBody();
             $title = $questionData["title"];
             $message = $questionData["message"];
-            $id = $_GET["id"];
+            $id = Get::get("id");
             $controller = new APIEditQuestionController($id, $title, $message);
             $controller->run();
         }, "PUT");

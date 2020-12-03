@@ -11,6 +11,7 @@ use App\Controller\PublicControllers\AnswerControllers\AddAnswerController;
 use App\Controller\PublicControllers\AnswerControllers\EditAnswerController;
 use App\Controller\PublicControllers\QuestionControllers\QuestionController;
 use BK_Framework\Router\Router;
+use BK_Framework\SuperGlobal\Get;
 use BK_Framework\SuperGlobal\Post;
 
 class AnswerRoutes implements RouteInitializer
@@ -31,7 +32,7 @@ class AnswerRoutes implements RouteInitializer
 
 		Router::add("/edit-answer", function () {
 		    $questionId = $_GET["questionId"];
-		    $answerId = $_GET["id"];
+		    $answerId = Get::get("id");
 		    $controller = new EditAnswerController($questionId, $answerId);
 		    $controller->run();
         }, "GET");
@@ -40,7 +41,7 @@ class AnswerRoutes implements RouteInitializer
             $answerData = Post::requestBody();
             $message = $answerData["message"];
             $questionId = $answerData["questionId"];
-            $id = $_GET["id"];
+			$id = Get::get("id");
             $controller = new APIEditAnswerController($id, $message, $questionId);
             $controller->run();
         }, "PUT");

@@ -12,7 +12,7 @@ function validateUserInput() {
     const message = document.querySelector("#message").value;
     const errorContainer = document.querySelector("#error-container");
     const id = document.querySelector("#title").dataset.id;
-    const questionId = document.querySelector("#title").dataset.questionId;
+    const questionId = document.querySelector("#title").dataset.questionid;
 
     if (checkNonEmptyFields(message, errorContainer)) {
         const answer = {message: message, questionId: questionId};

@@ -32,7 +32,7 @@ class EditAnswerController extends BaseController
     {
         $pdo = Connection::getConnection(self::$dbConfig);
         $answerData = AnswerQueries::getAnswerDataById($pdo, $this->answerId);
-        $this->view("Answers.edit-answer", ["answerData"=>$answerData, $this->questionId]);
+        $this->view("Answers.edit-answer", ["answerData"=>$answerData, "questionId"=>$this->questionId]);
 
     }
 }

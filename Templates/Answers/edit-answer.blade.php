@@ -12,10 +12,8 @@
 @include("header")
 @include("navbar")
 
-<h1 id="title" data-id={{$answerData->get("id")}}  data-questionId={{$questionId}}>Edit your answer!</h1>
-<textarea name="message" id="message" cols="30" rows="10" form="add-question-form">
-    {{$answerData->get("message")}}
-</textarea><br>
+<h1 id="title" data-id={{$answerData->get("id")}}  data-questionid={{$questionId}}>Edit your answer!</h1>
+<textarea name="message" id="message" cols="30" rows="10" form="add-question-form">{{$answerData->get("message")}}</textarea><br>
 <input id="submit-button" type="submit" value="Edit answer">
 <div id="error-container"></div>
 </body>
