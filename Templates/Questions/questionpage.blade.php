@@ -37,7 +37,7 @@
     </div>
     <div class="links">
         <a href="/add-tag/{{\BK_Framework\SuperGlobal\Get::get("id")}}">Add tag</a>
-        <a href="/addtag">Add answer</a>
+        <a href="/add-answer/{{$questionData->get("id")}}">Add answer</a>
         <a href="/edit-question?id={{\BK_Framework\SuperGlobal\Get::get("id")}}">Edit question</a>
         <a href="/delete-question?id={{\BK_Framework\SuperGlobal\Get::get("id")}}">Delete question</a>
     </div>
@@ -45,7 +45,12 @@
 
 
 <div class="answers">
-    <h1>Answers for this question:</h1>
+    @if (count($answers) > 0)
+        <h1>Answers for this question:</h1>
+    @else
+        <h1>There are no answers for this questions. Be the first one to answer!</h1>
+    @endif
+
     @foreach($answers as $answer)
         <div class="answer">
             <div class="answer-infos">
@@ -55,6 +60,8 @@
                 <div class="votes">
                     <p>{{$answer->get("vote_number")}} people likes this answer.</p>
                 </div>
+                <a href="/edit-answer?id={{$answer->get("id")}}&questionId={{\BK_Framework\SuperGlobal\Get::get("id")}}">Edit answer</a>
+                <p data-answerid="{{$answer->get("id")}}" class="delete-answer-button">Delete answer</p>
             </div>
             <div class="answer-message">
                 <p>{{$answer->get("message")}}</p>

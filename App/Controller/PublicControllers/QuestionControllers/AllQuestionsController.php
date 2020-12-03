@@ -1,13 +1,14 @@
 <?php
 
 
-namespace App\Controller\PublicControllers;
+namespace App\Controller\PublicControllers\QuestionControllers;
 
 
+use App\Controller\BaseController;
 use App\Queries\QuestionQueries;
 use BK_Framework\Database\Connection\Connection;
 
-class AllQuestionController extends \App\Controller\BaseController
+class AllQuestionsController extends BaseController
 {
 
     /**
@@ -20,9 +21,8 @@ class AllQuestionController extends \App\Controller\BaseController
 
     public function run()
     {
-        session_start();
         $pdo = Connection::getConnection(self::$dbConfig);
         $questions = QuestionQueries::getAllQuestions($pdo);
-        $this->view("all", ["questions"=>$questions]);
+        $this->view("Questions.all-questions", ["questions"=>$questions]);
     }
 }

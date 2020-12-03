@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Gamper Plumber Inc.</title>
 
-    <link rel="stylesheet" type="text/css" href="../static/stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="../../static/stylesheets/main.css">
 </head>
 
 <body>
@@ -12,8 +12,8 @@
 
 <div class="welcome-text">
     <h1 class="main-text">Welcome to the Gamper Plumber Inc. by Crosswalk Transform</h1>
-    <h2 class="text"> On this page you can see all questions on this website, <br>
-        feel free to search between among us</h2>
+    <h2 class="text"> On this page you can see all asked questions connecting to plumbing issues, <br>
+        feel free to search among us...</h2>
 </div>
 
 @include("navbar")
@@ -22,12 +22,12 @@
     <table class="content-table">
         <thead>
         <tr>
-            <th>ID</th>
-            <th>Submission Time</th>
-            <th>Title</th>
-            <th>Message</th>
-            <th>Image</th>
-            <th>Vote Number</th>
+            <th class="id">ID</th>
+            <th class="time">Submission Time</th>
+            <th class="title">Title</th>
+            <th class="message">Message</th>
+            <th class="img">Image</th>
+            <th class="vote">Vote Number</th>
         </tr>
         </thead>
 

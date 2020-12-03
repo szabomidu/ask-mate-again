@@ -12,11 +12,22 @@ use BK_Framework\Database\Connection\Connection;
 class AddTagController extends BaseController
 {
 
-    public function run()
+	private int $questionId;
+
+	/**
+	 * AddTagController constructor.
+	 * @param int $questionId
+	 */
+	public function __construct(int $questionId)
+	{
+		parent::__construct();
+		$this->questionId = $questionId;
+	}
+
+	public function run()
     {
-        session_start();
         $pdo = Connection::getConnection(self::$dbConfig);
-        $tags = TagQueries::getAllTags($pdo);
+        $tags = TagQueries::getAllAvailableTagsForQuestion($pdo, $this->questionId);
         $this->view("Tags.add-tag", ["tags"=>$tags]);
     }
 }

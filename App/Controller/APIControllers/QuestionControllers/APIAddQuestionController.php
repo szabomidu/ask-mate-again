@@ -16,13 +16,12 @@ class APIAddQuestionController extends BaseController
 
     public function run()
     {
-    	session_start();
     	$userId = Session::get("userId");
 		$title = Post::get("title");
 		$message = Post::get("message");
 		$question = new Question($title, $message);
 		$pdo = $this->getConnection();
-		QuestionQueries::add($pdo, $question, $userId);
-		Server::redirect("/");
+		$questionId = QuestionQueries::add($pdo, $question, $userId);
+		Server::redirect("/question?id=$questionId");
     }
 }

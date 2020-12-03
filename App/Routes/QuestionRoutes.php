@@ -4,20 +4,28 @@
 namespace App\Routes;
 
 use App\Controller\APIControllers\QuestionControllers\APIEditQuestionController;
+use App\Controller\PublicControllers\QuestionControllers\AllQuestionsController;
 use App\Controller\PublicControllers\QuestionControllers\DeleteQuestionController;
 use App\Controller\PublicControllers\QuestionControllers\QuestionController;
 use App\Controller\APIControllers\QuestionControllers\APIAddQuestionController;
 use App\Controller\PublicControllers\QuestionControllers\AddQuestionController;
 use App\Controller\PublicControllers\QuestionControllers\EditQuestionController;
 use BK_Framework\Router\Router;
+use BK_Framework\SuperGlobal\Get;
 use BK_Framework\SuperGlobal\Post;
 
 class QuestionRoutes implements RouteInitializer
 {
     function init(): void
     {
+
+		Router::add("/all", function () {
+			$controller = new AllQuestionsController();
+			$controller->run();
+		}, "GET");
+
         Router::add("/question", function () {
-            $id = $_GET["id"];
+            $id = Get::get("id");
             $controller = new QuestionController($id);
             $controller->run();
         }, "GET");
@@ -42,7 +50,7 @@ class QuestionRoutes implements RouteInitializer
             $questionData = Post::requestBody();
             $title = $questionData["title"];
             $message = $questionData["message"];
-            $id = $_GET["id"];
+            $id = Get::get("id");
             $controller = new APIEditQuestionController($id, $title, $message);
             $controller->run();
         }, "PUT");

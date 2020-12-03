@@ -22,12 +22,12 @@
 		<table class="content-table">
 			<thead>
 				<tr>
-					<th>ID</th>
-					<th>Submission Time</th>
-					<th>Title</th>
-					<th>Message</th>
-					<th>Image</th>
-					<th>Vote Number</th>
+					<th class="id">ID</th>
+					<th class="time">Submission Time</th>
+					<th class="title">Title</th>
+					<th class="message">Message</th>
+					<th class="img">Image</th>
+					<th class="vote">Vote Number</th>
 				</tr>
 			</thead>
 

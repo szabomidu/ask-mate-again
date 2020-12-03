@@ -14,7 +14,8 @@ class RouteManager
 		self::$routes = array(new MainRoutes(),
 							new UserSystemRoutes(),
 							new QuestionRoutes(),
-                            new TagRoutes());
+                            new TagRoutes(),
+							new AnswerRoutes());
 		foreach (self::$routes as $route) $route->init();
 	}
 

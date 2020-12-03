@@ -31,7 +31,6 @@ class APILoginController extends BaseController {
 
     public function run()
     {
-        session_start();
         $pdo = Connection::getConnection(self::$dbConfig);
             if (UserQueries::checkIfUsernameValid($pdo, self::$username, self::$password)) {
                 $userId = UserQueries::getUserIdByUsername($pdo, self::$username);

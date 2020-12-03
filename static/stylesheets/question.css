@@ -1,10 +1,10 @@
-.answers, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
+.answers .answer .answer-infos a, .answers .answer .answer-infos .delete-answer-button, .answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.answers, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
+.answers .answer .answer-infos a, .answers .answer .answer-infos .delete-answer-button, .answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,13 +47,13 @@ body {
   background-color: #eae2d6;
 }
 
-.answers, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
+.answers .answer .answer-infos a, .answers .answer .answer-infos .delete-answer-button, .answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.answers, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
+.answers .answer .answer-infos a, .answers .answer .answer-infos .delete-answer-button, .answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -91,7 +91,7 @@ body {
 .title {
   height: 80px;
   margin: 10px;
-  background-color: #b7950a;
+  background-color: #c6ad87;
   border-radius: 10px;
   font-size: 30px;
   color: #eeeeee;
@@ -106,8 +106,8 @@ body {
   flex-direction: column;
   align-items: center;
   width: 800px;
-  min-height: 400px;
-  background-color: #b7950a;
+  min-height: 250px;
+  background-color: #c6ad87;
   border-radius: 10px;
 }
 .question #tag-container {
@@ -128,7 +128,7 @@ body {
   list-style-type: none;
 }
 .question #tag-container ul li {
-  background-color: #b7950a;
+  background-color: #c6ad87;
   flex-direction: row;
   padding: 5px;
   height: 35px;
@@ -143,13 +143,13 @@ body {
 }
 .question .description {
   width: 95%;
-  min-height: 280px;
+  min-height: 190px;
   color: #eeeeee;
   text-align: justify;
   font-size: 25px;
 }
 .question .links {
-  bottom: 0;
+  justify-content: flex-end;
   margin-bottom: 20px;
 }
 .question .links a {
@@ -166,15 +166,16 @@ body {
 
 .answers {
   flex-direction: column;
-  position: relative;
+  justify-content: flex-start;
+  width: 100%;
   margin: 20px 10px;
-  min-height: 400px;
+  min-height: 200px;
   background-color: #867666;
   border-radius: 10px;
 }
 .answers h1 {
-  position: absolute;
-  top: 0;
+  width: 100%;
+  height: 30px;
   padding: 10px 0;
   text-align: center;
   color: #eeeeee;
@@ -183,7 +184,7 @@ body {
 .answers .answer {
   margin: 10px;
   width: 95%;
-  background-color: #b7950a;
+  background-color: #c6ad87;
   border-radius: 10px;
 }
 .answers .answer .answer-infos {
@@ -197,8 +198,21 @@ body {
 }
 .answers .answer .answer-infos .votes {
   color: #eeeeee;
-  margin-left: 30px;
+  margin: 0 20px 0 30px;
   font-size: 17px;
+}
+.answers .answer .answer-infos a, .answers .answer .answer-infos .delete-answer-button {
+  color: #eeeeee;
+  text-decoration: none;
+  margin: 5px 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 17px;
+}
+.answers .answer .answer-infos a:hover, .answers .answer .answer-infos .delete-answer-button:hover {
+  cursor: pointer;
+  color: #474747;
+  background-color: #eae2d6;
 }
 .answers .answer .answer-message {
   color: #eeeeee;

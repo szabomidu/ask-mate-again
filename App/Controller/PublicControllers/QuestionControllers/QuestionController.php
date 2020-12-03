@@ -25,7 +25,6 @@ class QuestionController extends BaseController
 
     public function run()
     {
-        session_start();
         $pdo = Connection::getConnection(self::$dbConfig);
         $questionData = QuestionQueries::getQuestionDataById($pdo, $this->id);
         $answers = QuestionQueries::getAnswersToQuestionById($pdo, $this->id);

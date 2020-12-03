@@ -1,5 +1,8 @@
 @import "variables";
 
+::-webkit-scrollbar {
+  display: none;
+}
 
 /********************************/
 /* Header bar with profile info */
@@ -60,6 +63,30 @@
       color: $text-color-light;
       background-color: $background-color-darker;
     }
+
+    .id {
+      width: 88px;
+    }
+
+    .time {
+       width: 290px;
+     }
+
+    .title {
+      width: 190px;
+    }
+
+    .message {
+      width: 421px;
+    }
+
+    .img {
+      width: 143px;
+    }
+
+    .vote {
+      width: 231px;
+    }
   }
 
   tbody {
@@ -85,15 +112,10 @@
 /*********/
 a {
   text-decoration: none;
-  color: $background-color-lighter;
+  color: $background-color-darker;
 }
 
 a:hover {
   text-decoration: none;
-  color: $hover-color;
-}
-
-a:visited {
-  text-decoration: none;
-  color: $background-color-darker;
+  color: $success;
 }

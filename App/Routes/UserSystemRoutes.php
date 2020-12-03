@@ -24,7 +24,7 @@ class UserSystemRoutes implements RouteInitializer
 	function init(): void
 	{
 		Router::add("/register", function () {
-			$controller = new RegistrationController("UserSystem");
+			$controller = new RegistrationController();
 			$controller->run();
 		}, "GET");
 
@@ -44,7 +44,7 @@ class UserSystemRoutes implements RouteInitializer
 		}, "POST");
 
         Router::add("/login", function () {
-            $controller = new LoginController("UserSystem");
+            $controller = new LoginController();
             $controller->run();
         }, "GET");
 
@@ -60,7 +60,7 @@ class UserSystemRoutes implements RouteInitializer
                 Logger::getInstance()->error($exception->getMessage());
             }
         }, "POST");
-    
+
     	Router::add("/logout", function () {
 			$controller = new LogoutController();
 			$controller->run();
