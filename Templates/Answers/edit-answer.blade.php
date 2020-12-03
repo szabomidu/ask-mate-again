@@ -13,7 +13,7 @@
 @include("header")
 @include("navbar")
 
-<div class="form">
+<div class="container">
 	<h1 id="title" data-id={{$answerData->get("id")}}  data-questionid={{$questionId}}>Edit your answer!</h1>
 	<textarea name="message" id="message" cols="30" rows="10"
 			  form="add-question-form">{{$answerData->get("message")}}</textarea><br>
