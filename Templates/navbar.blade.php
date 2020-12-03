@@ -8,7 +8,7 @@
         @endif
 
         @if (\BK_Framework\SuperGlobal\Session::isLoggedIn())
-            <li><a href="/users">Users</a></li>
+            <li><a href="#">Users</a></li>
             <li><a href="/add-question">Add question</a></li>
             <li><a href="/all-tags">Tags</a></li>
         @endif
