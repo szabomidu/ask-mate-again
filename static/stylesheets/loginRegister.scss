@@ -11,6 +11,10 @@ body {
   @extend %display-flex;
 }
 
+.redirect {
+  font-size: 30px;
+}
+
 .form {
   @extend %form;
 

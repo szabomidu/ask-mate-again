@@ -40,7 +40,7 @@ function checkEqualPasswords(passwordOne, passwordTwo, errorContainer) {
 
 function redirectToMainPage(data) {
     if (data["state"] === "success") {
-        document.querySelector("body").innerHTML = "Successful registration, redirecting to main page..."
+        document.querySelector("body").innerHTML = "<p class='redirect'> Successful editing, redirecting to question page... </p>"
         setTimeout(() => {
             window.location.replace("/")
         }, 1000)
