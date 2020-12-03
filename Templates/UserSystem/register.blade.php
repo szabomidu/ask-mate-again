@@ -20,6 +20,8 @@
 				<div><img src="../../static/pictures/plumber-2.png"></div>
 				<div><img src="../../static/pictures/plumber-3.png"></div>
 				<div><img src="../../static/pictures/plumber-4.png"></div>
+				<div><img src="../../static/pictures/plumber-6.png"></div>
+				<div><img src="../../static/pictures/plumber-6.png"></div>
 			</div>
 		</section>
 	</div>
