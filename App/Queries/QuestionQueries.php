@@ -13,7 +13,7 @@ class QuestionQueries
 
     public static function getFiveMostRecentQuestions(PDO $pdo): array
     {
-        $sql = "SELECT id, title, message, vote_number
+        $sql = "SELECT id, title, message, vote_number, submission_time
 				FROM question
 				ORDER BY id DESC
 				LIMIT 5";
@@ -41,7 +41,7 @@ class QuestionQueries
 
     public static function getAllQuestions(PDO $pdo): array
     {
-        $sql = "SELECT id, title, message, vote_number
+        $sql = "SELECT id, title, message, vote_number, submission_time
 				FROM question
 				ORDER BY id DESC";
         return Queries::queryAll($pdo, $sql);
