@@ -66,8 +66,8 @@
 
 .set div:nth-child(9) {
     left: 73%;
-    animation: leaf1 5s linear infinite;
-    animation-delay: -5s;
+    animation: leaf1 6s linear infinite;
+    animation-delay: -2s;
 }
 
 .set div:nth-child(10) {
