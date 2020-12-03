@@ -60,7 +60,7 @@
                 <div class="votes">
                     <p>{{$answer->get("vote_number")}} people likes this answer.</p>
                 </div>
-                <a href="/edit-question?id={{\BK_Framework\SuperGlobal\Get::get("id")}}">Edit answer not working</a>
+                <a href="/edit-answer?id={{$answer->get("id")}}&questionId={{\BK_Framework\SuperGlobal\Get::get("id")}}">Edit answer</a>
                 <p data-answerid="{{$answer->get("id")}}" class="delete-answer-button">Delete answer</p>
             </div>
             <div class="answer-message">

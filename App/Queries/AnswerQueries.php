@@ -30,6 +30,25 @@ class AnswerQueries
 		Queries::execute($pdo, $sql, ["id" => $questionId]);
 	}
 
+	public static function getAnswerDataById(PDO $pdo, int $id)
+    {
+	    $sql = "SELECT id, message
+	            FROM answer
+	            WHERE id = :id";
+        return Queries::queryOne($pdo, $sql, ["id" => $id]);
+    }
+
+    public static function updateAnswer(PDO $pdo, int $answerId, string $message)
+    {
+        $sql = "UPDATE answer
+                SET message = :message
+                WHERE id = :id";
+        Queries::execute($pdo, $sql,
+                ["message" => $message,
+                "id" => $answerId]);
+      
+    }
+  
     public static function deleteById(PDO $pdo, int $answerId) : void
     {
 		$sql = "DELETE
