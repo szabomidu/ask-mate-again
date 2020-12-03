@@ -22,12 +22,20 @@ class AnswerQueries
 
 	}
 
-	public static function deleteByQuestionId(PDO $pdo, int $id)
+	public static function deleteByQuestionId(PDO $pdo, int $questionId) : void
 	{
 		$sql = "DELETE
                 FROM answer
                 WHERE id_question = :id";
-		Queries::execute($pdo, $sql, ["id" => $id]);
+		Queries::execute($pdo, $sql, ["id" => $questionId]);
 	}
+
+    public static function deleteById(PDO $pdo, int $answerId) : void
+    {
+		$sql = "DELETE
+                FROM answer
+                WHERE id = :id";
+		Queries::execute($pdo, $sql, ["id" => $answerId]);
+    }
 
 }

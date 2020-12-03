@@ -49,9 +49,7 @@ class QuestionQueries
 
     public static function getAnswersToQuestionById(PDO $pdo, int $id)
     {
-        $sql = "SELECT message,
-                    submission_time,
-                    vote_number
+        $sql = "SELECT id, message, submission_time, vote_number
                 FROM answer
                 WHERE id_question = :id";
         return Queries::queryAll($pdo, $sql, ["id" => $id]);
@@ -71,7 +69,7 @@ class QuestionQueries
 
     public static function deleteQuestion($pdo, int $id)
     {
-        $sql = "DELETE 
+        $sql = "DELETE
                 FROM question
                 WHERE id = :id";
         Queries::execute($pdo, $sql, ["id" => $id]);

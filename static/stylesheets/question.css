@@ -1,10 +1,10 @@
-.answers .answer .answer-infos a, .answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
+.answers .answer .answer-infos a, .answers .answer .answer-infos .delete-answer-button, .answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.answers .answer .answer-infos a, .answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
+.answers .answer .answer-infos a, .answers .answer .answer-infos .delete-answer-button, .answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,13 +47,13 @@ body {
   background-color: #eae2d6;
 }
 
-.answers .answer .answer-infos a, .answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
+.answers .answer .answer-infos a, .answers .answer .answer-infos .delete-answer-button, .answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.answers .answer .answer-infos a, .answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
+.answers .answer .answer-infos a, .answers .answer .answer-infos .delete-answer-button, .answers, .question .links, .question #tag-container ul li, .question #tag-container ul, .question #tag-container, .title, .navbar ul li, .navbar ul, .navbar {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -91,7 +91,7 @@ body {
 .title {
   height: 80px;
   margin: 10px;
-  background-color: #b7950a;
+  background-color: #c6ad87;
   border-radius: 10px;
   font-size: 30px;
   color: #eeeeee;
@@ -107,7 +107,7 @@ body {
   align-items: center;
   width: 800px;
   min-height: 400px;
-  background-color: #b7950a;
+  background-color: #c6ad87;
   border-radius: 10px;
 }
 .question #tag-container {
@@ -128,7 +128,7 @@ body {
   list-style-type: none;
 }
 .question #tag-container ul li {
-  background-color: #b7950a;
+  background-color: #c6ad87;
   flex-direction: row;
   padding: 5px;
   height: 35px;
@@ -184,7 +184,7 @@ body {
 .answers .answer {
   margin: 10px;
   width: 95%;
-  background-color: #b7950a;
+  background-color: #c6ad87;
   border-radius: 10px;
 }
 .answers .answer .answer-infos {
@@ -201,7 +201,7 @@ body {
   margin: 0 20px 0 30px;
   font-size: 17px;
 }
-.answers .answer .answer-infos a {
+.answers .answer .answer-infos a, .answers .answer .answer-infos .delete-answer-button {
   color: #eeeeee;
   text-decoration: none;
   margin: 5px 10px;
@@ -209,7 +209,8 @@ body {
   border-radius: 5px;
   font-size: 17px;
 }
-.answers .answer .answer-infos a:hover {
+.answers .answer .answer-infos a:hover, .answers .answer .answer-infos .delete-answer-button:hover {
+  cursor: pointer;
   color: #474747;
   background-color: #eae2d6;
 }
