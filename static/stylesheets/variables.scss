@@ -35,3 +35,77 @@ $table-cell-background-color-light: #d5c3aa;
   text-align: center;
 }
 
+%form {
+  @extend %display-flex;
+  flex-direction: column;
+  width: 500px;
+  height: 550px;
+  background-color: $background-color-darker;
+  text-align: center;
+  border-radius: 50px;
+
+  .title {
+    margin-bottom: 40px;
+
+    h1 {
+      color: $text-color-light;
+      text-transform: uppercase;
+      font-weight: 500;
+      background: $background-color-darker;
+    }
+  }
+
+  .content {
+    @extend %display-flex;
+    flex-direction: column;
+
+    input {
+      border: 2px solid $background-color-lighter;
+      width: 200px;
+      color: $text-color-light;
+    }
+
+    input::placeholder {
+      color: $text-color-light;
+    }
+
+    input:focus {
+      width: 280px;
+      border-color: #34495e;
+    }
+  }
+
+  .error {
+    @extend %display-flex;
+    flex-direction: column;
+    border: 3px solid rgb(165, 0, 0);
+    width: 300px;
+    border-radius: 24px;
+    color: $text-color-light;
+  }
+
+  .submit {
+    button[type = "submit"] {
+      width: 100px;
+      border: 2px solid $success;
+      color: $text-color-light;
+      cursor: pointer;
+    }
+
+    button[type = "submit"]:hover {
+      background: $success;
+    }
+  }
+}
+
+%common {
+  background: none;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  padding: 14px 10px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
