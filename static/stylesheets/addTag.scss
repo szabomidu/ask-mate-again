@@ -59,14 +59,6 @@ body {
   visibility: hidden;
 }
 
-.hide-item {
-  visibility: hidden
-}
-
-.display-item {
-  visibility: visible;
-}
-
 #tag-input-field {
   @extend %standard-input-field;
 }

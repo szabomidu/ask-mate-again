@@ -208,14 +208,6 @@ body {
   visibility: hidden;
 }
 
-.hide-item {
-  visibility: hidden;
-}
-
-.display-item {
-  visibility: visible;
-}
-
 #tags {
   background-color: #d5c3aa;
   border-radius: 5px;
