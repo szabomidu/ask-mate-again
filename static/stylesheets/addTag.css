@@ -5,8 +5,14 @@ body, .form .error, .form .content, .form {
 }
 
 #tag-input-field {
-  background-color: #d5c3aa;
-  border-radius: 5px;
+  background-color: #867666;
+  border-radius: 10px;
+  border: 2px solid #474747;
+  color: #eeeeee;
+  width: 300px;
+  padding: 5px;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 .form {
@@ -76,8 +82,14 @@ body, .form, .form .content, .form .error {
 }
 
 #tag-input-field {
-  background-color: #d5c3aa;
-  border-radius: 5px;
+  background-color: #867666;
+  border-radius: 10px;
+  border: 2px solid #474747;
+  color: #eeeeee;
+  width: 300px;
+  padding: 5px;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 .form {
