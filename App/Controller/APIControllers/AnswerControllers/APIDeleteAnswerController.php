@@ -5,6 +5,7 @@ namespace App\Controller\APIControllers\AnswerControllers;
 
 
 use App\Controller\BaseController;
+use BK_Framework\Logger\Logger;
 
 class APIDeleteAnswerController extends BaseController
 {
@@ -23,6 +24,6 @@ class APIDeleteAnswerController extends BaseController
 
 	public function run()
     {
-        // TODO: Implement run() method.
+        Logger::getInstance()->debug("Got answer id: " . $this->answerId);
     }
 }
