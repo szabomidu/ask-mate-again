@@ -17,8 +17,8 @@ class TagRoutes implements RouteInitializer
 
     function init(): void
     {
-        Router::add("/add-tag/([0-9]*)", function () {
-            $controller = new AddTagController();
+        Router::add("/add-tag/([0-9]*)", function ($questionId) {
+            $controller = new AddTagController($questionId);
             $controller->run();
         }, "GET");
 
