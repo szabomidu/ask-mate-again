@@ -30,7 +30,7 @@ function checkNonEmptyFields(username, password, errorContainer) {
 
 function redirectToMainPage(data) {
     if (data["state"] === "success") {
-        document.querySelector("body").innerHTML = "<p class='redirect'> Successful editing, redirecting to question page... </p>"
+        document.querySelector("body").innerHTML = "<p class='redirect'> Successful login, redirecting to main page... </p>"
         setTimeout(() => {window.location.replace("/")}, 1000)
     }
     else if (data["state"] === "invalid") {
