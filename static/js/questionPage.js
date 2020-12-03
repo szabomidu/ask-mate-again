@@ -48,6 +48,9 @@ function removeAnswerCard(data) {
 				element.remove();
 			}
 		)
+	if ([...document.querySelectorAll(".answer")].length === 0) {
+		document.querySelector('.answers h1').innerHTML = "There are no answers for this questions. Be the first one to answer!";
+	}
 }
 
 function displayErrorMessages() {
