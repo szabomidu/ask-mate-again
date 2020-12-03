@@ -35,7 +35,7 @@ class Post
 	 */
 	public static function has(string $key) : bool
 	{
-		return isset($POST[$key]);
+		return isset($_POST[$key]);
 	}
 
 	/**
