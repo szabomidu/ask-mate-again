@@ -18,7 +18,7 @@
   background-color: $table-cell-background-color-light;
   border-radius: 20px;
   width: 500px;
-  margin: auto;
+  margin: 30px auto;
   padding: 20px;
   height: 400px;
 }
@@ -29,6 +29,7 @@ h1 {
 
 input[type="text"], textarea {
   @extend %standard-input-field;
+  font-size: 15px;
 }
 
 input[type="text"] {
@@ -54,13 +55,18 @@ input[type="submit"]:hover {
 }
 
 form {
-  @include centered-content(50%);
+  @extend %display-flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-  * {
-	width: 50%;
-	margin-top: 10px;
+  ::placeholder {
+    color: $text-color-light;
   }
 
+  * {
+    margin: 10px;
+    font-size: 15px;
+  }
 }
 
 *::placeholder {
