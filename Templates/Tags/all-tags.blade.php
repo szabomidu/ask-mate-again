@@ -16,7 +16,7 @@
         <thead>
         <tr>
             <th>TAG NAME</th>
-            <th>USED AMOUNT</th>
+            <th>QUESTIONS</th>
         </tr>
         </thead>
 

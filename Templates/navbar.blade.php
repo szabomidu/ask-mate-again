@@ -9,9 +9,8 @@
 
         @if (\BK_Framework\SuperGlobal\Session::isLoggedIn())
             <li><a href="/users">Users</a></li>
-            <li><a href="/tags">Tags</a></li>
             <li><a href="/add-question">Add question</a></li>
-            <li><a href="/all-tags">Show all tags</a></li>
+            <li><a href="/all-tags">Tags</a></li>
         @endif
 
         <li><a href="/all">Show all questions</a></li>
