@@ -38,7 +38,7 @@
 					<td>{{ $question->get("submission_time") }}</td>
 					<td> <a href="/question?id={{$question->get("id")}}">{{$question->get("title")}}</a></td>
 					<td>{{$question->get("message")}}</td>
-					<td>IMAGE</td>
+					<td><img height="80" src="../static/pictures/plumber-6.png" alt=""></td>
 					<td>{{$question->get("vote_number")}}</td>
 				</tr>
 				@endforeach
