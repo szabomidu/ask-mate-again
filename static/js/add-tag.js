@@ -8,12 +8,12 @@ function init() {
 
 	const tagSelectButton = document.querySelector("#tag-select-button");
 	if (tagSelectButton !== null) {
-		tagSelectButton.addEventListener("click", function() {displayDropdown(tags, tagInputField)});
+		tagSelectButton.addEventListener("click", function() {displayDropdown(tags, tagInputField, tagInputButton, tagSelectButton)});
 	}
 
 	const tagInputButton = document.querySelector("#tag-input-button");
 	if (tagInputButton !== null) {
-		tagInputButton.addEventListener("click", function() {displayInputField(tags, tagInputField)});
+		tagInputButton.addEventListener("click", function() {displayInputField(tags, tagInputField, tagInputButton, tagSelectButton)});
 	}
 
     document.querySelector("#submit-button").addEventListener("click", function() {addTag(tags, tagInputField)})
@@ -34,13 +34,19 @@ function redirectToQuestionPage(data) {
     window.location.replace(`/question?id=${data["id"]}`);
 }
 
-function displayInputField(tags, tagInputField) {
+function displayInputField(tags, tagInputField, tagInputButton, tagSelectButton) {
+	tagInputButton.classList.add("active");
+	tagSelectButton.classList.remove("active");
+
     tags.classList.add("hide-both");
     tagInputField.classList.remove("hide-both");
 }
 
 
-function displayDropdown(tags, tagInputField) {
+function displayDropdown(tags, tagInputField, tagInputButton, tagSelectButton) {
+	tagSelectButton.classList.add("active");
+	tagInputButton.classList.remove("active");
+
     tagInputField.value = "";
 	tags.classList.remove("hide-both");
 	tagInputField.classList.add("hide-both");
