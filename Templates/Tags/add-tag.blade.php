@@ -13,11 +13,13 @@
 	<button id="tag-input-button">I would like to add new tag</button>
 	<button id="tag-select-button">I would like to select a tag</button>
 
-	<select name="tags" id="tags" class="hide-both">
-		@foreach($tags as $tag)
-			<option value="{{$tag->get("id")}}">{{$tag->get("name")}}</option>
-		@endforeach
-	</select>
+	@if(0 < count($tags))
+		<select name="tags" id="tags" class="hide-both">
+			@foreach($tags as $tag)
+				<option value="{{$tag->get("id")}}">{{$tag->get("name")}}</option>
+			@endforeach
+		</select>
+	@endif
 
 	<input id="tag-input-field" type="text" placeholder="Custom Tag" class="hide-both">
 	<div class="submit">
