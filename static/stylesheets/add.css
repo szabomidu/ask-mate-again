@@ -131,6 +131,10 @@ textarea {
   height: 120px;
 }
 
+#add-answer-textarea {
+  height: 200px;
+}
+
 input[type=submit] {
   height: 40px;
   width: 150px;
