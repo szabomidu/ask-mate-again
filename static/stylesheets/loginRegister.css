@@ -25,7 +25,7 @@ body, .form .error, .form .content, .form {
   flex-direction: column;
 }
 .form .content input {
-  border: 2px solid #b7950a;
+  border: 2px solid #c6ad87;
   width: 200px;
   color: #eeeeee;
 }
@@ -91,7 +91,7 @@ body, .form, .form .content, .form .error {
   flex-direction: column;
 }
 .form .content input {
-  border: 2px solid #b7950a;
+  border: 2px solid #c6ad87;
   width: 200px;
   color: #eeeeee;
 }

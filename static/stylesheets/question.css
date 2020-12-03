@@ -91,7 +91,7 @@ body {
 .title {
   height: 80px;
   margin: 10px;
-  background-color: #b7950a;
+  background-color: #c6ad87;
   border-radius: 10px;
   font-size: 30px;
   color: #eeeeee;
@@ -107,7 +107,7 @@ body {
   align-items: center;
   width: 800px;
   min-height: 400px;
-  background-color: #b7950a;
+  background-color: #c6ad87;
   border-radius: 10px;
 }
 .question #tag-container {
@@ -128,7 +128,7 @@ body {
   list-style-type: none;
 }
 .question #tag-container ul li {
-  background-color: #b7950a;
+  background-color: #c6ad87;
   flex-direction: row;
   padding: 5px;
   height: 35px;
@@ -184,7 +184,7 @@ body {
 .answers .answer {
   margin: 10px;
   width: 95%;
-  background-color: #b7950a;
+  background-color: #c6ad87;
   border-radius: 10px;
 }
 .answers .answer .answer-infos {
