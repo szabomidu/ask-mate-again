@@ -19,9 +19,18 @@ class TagQueries
 
 	public static function getAllAvailableTagsForQuestion(PDO $pdo, int $questionId) : array
 	{
-		$sql = "SELECT id, name
-              FROM ask_mate_again.tag";
-		return Queries::queryAll($pdo, $sql);
+		$sql = "(SELECT id, name
+				FROM ask_mate_again.tag)
+
+				EXCEPT
+
+				(SELECT id, name
+				FROM ask_mate_again.tag
+				JOIN rel_question_tag rqt on tag.id = rqt.id_tag
+				WHERE rqt.id_question = :questionId
+				GROUP BY id, name)";
+
+		return Queries::queryAll($pdo, $sql, ["questionId"=>$questionId]);
 	}
 
 	public static function add(PDO $pdo, string $name): string
