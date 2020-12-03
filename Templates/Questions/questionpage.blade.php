@@ -45,7 +45,12 @@
 
 
 <div class="answers">
-    <h1>Answers for this question:</h1>
+    @if (count($answers) > 0)
+        <h1>Answers for this question:</h1>
+    @else
+        <h1>There are no answers for this questions. Be the first one to answer!</h1>
+    @endif
+
     @foreach($answers as $answer)
         <div class="answer">
             <div class="answer-infos">
