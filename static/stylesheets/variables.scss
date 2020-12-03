@@ -14,8 +14,14 @@ $table-cell-background-color-light: #d5c3aa;
 }
 
 %standard-input-field {
-	background-color: $table-cell-background-color-light;
-  	border-radius: 5px;
+  background-color: $background-color-darker;
+  border-radius: 10px;
+  border: 2px solid $text-color-dark;
+  color: $text-color-light;
+  width: 300px;
+  padding: 5px;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 %standard-button {
@@ -23,6 +29,7 @@ $table-cell-background-color-light: #d5c3aa;
   color: white;
   text-align: center;
   border-radius: 5px;
+  border: 2px solid $text-color-dark;
 }
 
 %standard-placeholder {
