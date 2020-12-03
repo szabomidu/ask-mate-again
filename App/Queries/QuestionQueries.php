@@ -29,12 +29,12 @@ class QuestionQueries
     }
 
 
-    public static function add(PDO $pdo, Question $question, string $userId): void
+    public static function add(PDO $pdo, Question $question, string $userId) : int
     {
         $sql = "INSERT INTO question (id_registered_user, title, message, vote_number)
 				VALUES (:userId, :title, :message, 0)";
 
-        Queries::execute($pdo, $sql, ["userId" => $userId,
+        return Queries::executeAndReturnWithId($pdo, $sql, ["userId" => $userId,
             "title" => $question->getTitle(),
             "message" => $question->getMessage()]);
     }
@@ -49,7 +49,7 @@ class QuestionQueries
 
     public static function getAnswersToQuestionById(PDO $pdo, int $id)
     {
-        $sql = "SELECT id, 
+        $sql = "SELECT id,
                     message,
                     submission_time,
                     vote_number

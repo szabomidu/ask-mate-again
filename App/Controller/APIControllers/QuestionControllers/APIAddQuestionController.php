@@ -21,7 +21,7 @@ class APIAddQuestionController extends BaseController
 		$message = Post::get("message");
 		$question = new Question($title, $message);
 		$pdo = $this->getConnection();
-		QuestionQueries::add($pdo, $question, $userId);
-		Server::redirect("/");
+		$questionId = QuestionQueries::add($pdo, $question, $userId);
+		Server::redirect("/question?id=$questionId");
     }
 }
