@@ -5,8 +5,16 @@ body, .form .error, .form .content, .form {
 }
 
 #tag-input-field {
-  background-color: #d5c3aa;
-  border-radius: 5px;
+  background-color: #b7950a;
+  border-radius: 10px;
+  border: 2px solid wheat;
+  color: #eeeeee;
+  font-size: 15px;
+  height: 22px;
+  width: 187px;
+  padding: 5px;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 .form {
@@ -76,8 +84,16 @@ body, .form, .form .content, .form .error {
 }
 
 #tag-input-field {
-  background-color: #d5c3aa;
-  border-radius: 5px;
+  background-color: #b7950a;
+  border-radius: 10px;
+  border: 2px solid wheat;
+  color: #eeeeee;
+  font-size: 15px;
+  height: 22px;
+  width: 187px;
+  padding: 5px;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 .form {
@@ -177,18 +193,22 @@ body {
   background-color: #eae2d6;
 }
 
-#tag-select-button, #tag-input-button {
+.tag-button {
   background-color: #b7950a;
   border: 1px solid wheat;
   cursor: pointer;
   width: 200px;
   height: 35px;
-  margin: 10px;
+  margin: 10px 10px 20px 10px;
   color: white;
   text-align: center;
   border-radius: 10px;
   outline: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+::placeholder {
+  color: #eeeeee;
 }
 
 html {
@@ -200,17 +220,35 @@ body {
   overflow: hidden;
 }
 
-#tag-select-button:hover, #tag-input-button:hover {
-  background-color: #867666;
+.form .submit button[type=submit] {
+  margin-top: 50px;
 }
 
 .hide-both {
+  display: none;
   visibility: hidden;
 }
 
-#tags {
-  background-color: #d5c3aa;
-  border-radius: 5px;
+.box select {
+  background-color: #b7950a;
+  color: #eeeeee;
+  padding: 6px;
+  height: 35px;
+  width: 200px;
+  border: 2px solid wheat;
+  font-size: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  outline: none;
+  border-radius: 10px;
+}
+
+.box select option {
+  padding: 30px;
+}
+
+.active {
+  background-color: #2ecc71;
 }
 
 /*# sourceMappingURL=addTag.css.map */

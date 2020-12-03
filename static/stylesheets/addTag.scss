@@ -7,12 +7,16 @@
   cursor: pointer;
   width: 200px;
   height: 35px;
-  margin: 10px;
+  margin: 10px 10px 20px 10px;
   color: white;
   text-align: center;
   border-radius: 10px;
   outline: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+::placeholder {
+  color: $text-color-light;
 }
 
 html {
@@ -39,23 +43,21 @@ body {
   .submit {
     button[type = "submit"] {
       @extend %common;
+      margin-top: 50px;
     }
   }
 }
 
-#tag-input-button {
+.tag-button {
   @extend %tag-button;
 }
 
-#tag-select-button {
-  @extend %tag-button;
-}
-
-#tag-select-button:hover, #tag-input-button:hover {
-  background-color: $background-color-darker;
-}
+//.tag-button:hover {
+//  background-color: $success;
+//}
 
 .hide-both {
+  display: none;
   visibility: hidden;
 }
 
@@ -63,7 +65,24 @@ body {
   @extend %standard-input-field;
 }
 
-#tags {
-  background-color: $table-cell-background-color-light;
-  border-radius: 5px;
+.box select {
+  background-color: $background-color-lighter;
+  color: $text-color-light;
+  padding: 6px;
+  height: 35px;
+  width: 200px;
+  border: 2px solid wheat;
+  font-size: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  outline: none;
+  border-radius: 10px;
+}
+
+.box select option {
+  padding: 30px;
+}
+
+.active {
+  background-color: $success;
 }
