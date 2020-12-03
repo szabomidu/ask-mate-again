@@ -64,6 +64,18 @@
     animation-delay: -4s;
 }
 
+.set div:nth-child(9) {
+    left: 73%;
+    animation: leaf1 5s linear infinite;
+    animation-delay: -5s;
+}
+
+.set div:nth-child(10) {
+    left: 13%;
+    animation: leaf1 8s linear infinite;
+    animation-delay: -1s;
+}
+
 
 @keyframes leaf1
 {
