@@ -44,7 +44,7 @@ function removeAnswerCard(data) {
 	const answerId = data["answerId"];
 	[...document.querySelectorAll(".answer")]
 		.forEach((element) => {
-			if (element.querySelector(".answer-infos .delete-answer-button").dataset.answerid === answerId)
+			if (parseInt(element.querySelector(".answer-infos .delete-answer-button").dataset.answerid) === answerId)
 				element.remove();
 			}
 		)
