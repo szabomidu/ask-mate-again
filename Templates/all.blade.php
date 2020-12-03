@@ -36,7 +36,7 @@
             <tr>
                 <td>{{$question->get("id")}}</td>
                 {{--				<td>{{ $question->get("submission_time") }}</td>--}}
-                <td>SUBMISSION TIME</td>
+                <td>{{ $question->get("submission_time") }}</td>
                 <td><a href="/question?id={{$question->get("id")}}">{{$question->get("title")}}</a></td>
                 <td>{{$question->get("message")}}</td>
                 <td>IMAGE</td>
