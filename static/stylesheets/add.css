@@ -1,6 +1,6 @@
 @import url(base.css);
 @import url(navbar.css);
-form, .container {
+form, .container, .redirect {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,6 +35,12 @@ input[type=submit] {
 /*********************/
 /* Navbar with links */
 /*********************/
+.redirect {
+  height: 100%;
+  margin-top: 25%;
+  font-size: 30px;
+}
+
 .container {
   flex-direction: column;
   justify-content: space-between;

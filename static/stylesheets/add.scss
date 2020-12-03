@@ -10,6 +10,13 @@
 /*********************/
 @import url(navbar.css);
 
+.redirect {
+  height: 100%;
+  margin-top: 25%;
+  @extend %display-flex;
+  font-size: 30px;
+}
+
 .container {
   @extend %display-flex;
   flex-direction: column;
