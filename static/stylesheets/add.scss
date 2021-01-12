@@ -1,0 +1,90 @@
+@import "variables";
+
+/********************************/
+/* Header bar with profile info */
+/********************************/
+@import 'base';
+
+/*********************/
+/* Navbar with links */
+/*********************/
+@import url(navbar.css);
+
+.redirect {
+  height: 100%;
+  margin-top: 25%;
+  @extend %display-flex;
+  font-size: 30px;
+}
+
+.container {
+  @extend %display-flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: $table-cell-background-color-light;
+  border-radius: 20px;
+  width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  height: 400px;
+
+  .error {
+    @extend %common;
+    border: 2px solid $hover-color;
+    border-radius: 10px;
+    color: $text-color-dark;
+  }
+}
+
+h1 {
+  color: $text-color-dark;
+}
+
+input[type="text"], textarea {
+  @extend %standard-input-field;
+  width: 300px;
+  font-size: 15px;
+}
+
+input[type="text"] {
+  height: 30px;
+  padding-top: 5px;
+}
+
+textarea {
+  height: 120px;
+}
+
+#add-answer-textarea {
+  height: 200px;
+}
+
+input[type="submit"] {
+  @extend %standard-button;
+  height: 40px;
+  width: 150px;
+  padding: 5px;
+  font-size: 120%;
+  font-weight: 750;
+}
+
+input[type="submit"]:hover {
+  color: $success;
+}
+
+form {
+  @extend %display-flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  ::placeholder {
+    color: $text-color-dark;
+  }
+
+  * {
+    margin: 10px;
+    font-size: 15px;
+  }
+}
+

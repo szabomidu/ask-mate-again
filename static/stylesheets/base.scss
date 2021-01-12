@@ -1,0 +1,45 @@
+@import 'variables';
+
+body {
+  background-color: $background-color;
+}
+
+.profile-bar {
+  background-color: $background-color-darker;
+  color: $text-color-light;
+
+  height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  .header-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+
+    .logged-in {
+      font-size: 20px;
+      color: $text-color-light;
+    }
+
+    a {
+      color: $text-color-light;
+      border-radius: 5px;
+      font-size: 20px;
+      text-decoration: none;
+      padding: 5px 30px;
+    }
+
+    a:hover {
+      color: $text-color-dark;
+      background-color: $background-color;
+    }
+  }
+}
+

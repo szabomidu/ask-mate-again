@@ -1,0 +1,88 @@
+@import "variables";
+@import "base";
+
+%tag-button {
+  background-color: $background-color-lighter;
+  border: 1px solid wheat;
+  cursor: pointer;
+  width: 200px;
+  height: 35px;
+  margin: 10px 10px 20px 10px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+::placeholder {
+  color: $text-color-light;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  @extend %display-flex;
+}
+
+.form {
+  @extend %form;
+
+  .content input {
+    @extend %common;
+  }
+
+  .error {
+    @extend %common;
+  }
+
+  .submit {
+    button[type = "submit"] {
+      @extend %common;
+      margin-top: 50px;
+    }
+  }
+}
+
+.tag-button {
+  @extend %tag-button;
+}
+
+//.tag-button:hover {
+//  background-color: $success;
+//}
+
+.hide-both {
+  display: none;
+  visibility: hidden;
+}
+
+#tag-input-field {
+  @extend %standard-input-field;
+}
+
+.box select {
+  background-color: $background-color-lighter;
+  color: $text-color-light;
+  padding: 6px;
+  height: 35px;
+  width: 200px;
+  border: 2px solid wheat;
+  font-size: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  outline: none;
+  border-radius: 10px;
+}
+
+.box select option {
+  padding: 30px;
+}
+
+.active {
+  background-color: $success;
+}

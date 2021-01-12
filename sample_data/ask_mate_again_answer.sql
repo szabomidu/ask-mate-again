@@ -1,0 +1,11 @@
+INSERT INTO ask_mate_again.answer (id, id_question, id_registered_user, message, vote_number, submission_time) VALUES (1, 1, 2, 'I think you were born this way!', 0, '2020-12-03 11:32:27');
+INSERT INTO ask_mate_again.answer (id, id_question, id_registered_user, message, vote_number, submission_time) VALUES (2, 9, 2, 'How to be a simple plumber by George the Plumber', 0, '2020-12-03 11:33:21');
+INSERT INTO ask_mate_again.answer (id, id_question, id_registered_user, message, vote_number, submission_time) VALUES (3, 9, 2, 'Best Plumber In The County by Philip Plumbee', 0, '2020-12-03 11:33:43');
+INSERT INTO ask_mate_again.answer (id, id_question, id_registered_user, message, vote_number, submission_time) VALUES (4, 3, 2, 'Ask him to be your teacher, I''m sure he would help.', 0, '2020-12-03 11:34:21');
+INSERT INTO ask_mate_again.answer (id, id_question, id_registered_user, message, vote_number, submission_time) VALUES (5, 3, 2, 'YouTube', 0, '2020-12-03 11:34:30');
+INSERT INTO ask_mate_again.answer (id, id_question, id_registered_user, message, vote_number, submission_time) VALUES (6, 7, 2, 'Try to dress like them', 0, '2020-12-03 11:34:48');
+INSERT INTO ask_mate_again.answer (id, id_question, id_registered_user, message, vote_number, submission_time) VALUES (7, 7, 2, 'Bring them nice food', 0, '2020-12-03 11:34:56');
+INSERT INTO ask_mate_again.answer (id, id_question, id_registered_user, message, vote_number, submission_time) VALUES (8, 5, 1, 'PVC is fine just by a smaller one', 0, '2020-12-03 11:36:12');
+INSERT INTO ask_mate_again.answer (id, id_question, id_registered_user, message, vote_number, submission_time) VALUES (9, 6, 1, '1. Screw out the old one, 2. Place in the new one. 3. Smile, because it''s that simple!', 0, '2020-12-03 11:36:49');
+INSERT INTO ask_mate_again.answer (id, id_question, id_registered_user, message, vote_number, submission_time) VALUES (10, 8, 3, 'Saw, pipe wrench, spanner, spirit level', 0, '2020-12-03 11:38:28');
+INSERT INTO ask_mate_again.answer (id, id_question, id_registered_user, message, vote_number, submission_time) VALUES (11, 7, 3, 'Sing them songs in your free time', 0, '2020-12-03 11:38:50');

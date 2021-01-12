@@ -1,0 +1,183 @@
+body, .form .error, .form .content, .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  flex-direction: column;
+  width: 500px;
+  height: 550px;
+  background-color: #867666;
+  text-align: center;
+  border-radius: 50px;
+}
+.form .title {
+  margin-bottom: 40px;
+}
+.form .title h1 {
+  color: #eeeeee;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: #867666;
+}
+.form .content {
+  flex-direction: column;
+}
+.form .content input {
+  border: 2px solid #c6ad87;
+  width: 200px;
+  color: #eeeeee;
+}
+.form .content input::placeholder {
+  color: #eeeeee;
+}
+.form .content input:focus {
+  width: 280px;
+  border-color: #34495e;
+}
+.form .error {
+  flex-direction: column;
+  border: 3px solid #a50000;
+  width: 300px;
+  border-radius: 24px;
+  color: #eeeeee;
+}
+.form .submit button[type=submit] {
+  width: 100px;
+  border: 2px solid #2ecc71;
+  color: #eeeeee;
+  cursor: pointer;
+}
+.form .submit button[type=submit]:hover {
+  background: #2ecc71;
+}
+
+.form .submit button[type=submit], .form .error, .form .content input {
+  background: none;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  padding: 14px 10px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+body, .form, .form .content, .form .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  flex-direction: column;
+  width: 500px;
+  height: 550px;
+  background-color: #867666;
+  text-align: center;
+  border-radius: 50px;
+}
+.form .title {
+  margin-bottom: 40px;
+}
+.form .title h1 {
+  color: #eeeeee;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: #867666;
+}
+.form .content {
+  flex-direction: column;
+}
+.form .content input {
+  border: 2px solid #c6ad87;
+  width: 200px;
+  color: #eeeeee;
+}
+.form .content input::placeholder {
+  color: #eeeeee;
+}
+.form .content input:focus {
+  width: 280px;
+  border-color: #34495e;
+}
+.form .error {
+  flex-direction: column;
+  border: 3px solid #a50000;
+  width: 300px;
+  border-radius: 24px;
+  color: #eeeeee;
+}
+.form .submit button[type=submit] {
+  width: 100px;
+  border: 2px solid #2ecc71;
+  color: #eeeeee;
+  cursor: pointer;
+}
+.form .submit button[type=submit]:hover {
+  background: #2ecc71;
+}
+
+.form .submit button[type=submit], .form .error, .form .content input {
+  background: none;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  padding: 14px 10px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+body {
+  background-color: #eae2d6;
+}
+
+.profile-bar {
+  background-color: #867666;
+  color: #eeeeee;
+  height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.profile-bar .header-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+}
+.profile-bar .header-links .logged-in {
+  font-size: 20px;
+  color: #eeeeee;
+}
+.profile-bar .header-links a {
+  color: #eeeeee;
+  border-radius: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 5px 30px;
+}
+.profile-bar .header-links a:hover {
+  color: #474747;
+  background-color: #eae2d6;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.redirect {
+  font-size: 30px;
+}
+
+/*# sourceMappingURL=loginRegister.css.map */

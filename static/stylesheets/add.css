@@ -1,0 +1,189 @@
+@import url(navbar.css);
+form, .container, .redirect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=text], textarea {
+  background-color: #c6ad87;
+  border-radius: 10px;
+  border: 2px solid wheat;
+  color: #474747;
+  font-size: 15px;
+  height: 22px;
+  width: 187px;
+  padding: 5px;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+input[type=submit] {
+  background-color: #867666;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid #474747;
+}
+
+.container .error {
+  background: none;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  padding: 14px 10px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+/********************************/
+/* Header bar with profile info */
+/********************************/
+form, .container, .redirect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=text], textarea {
+  background-color: #c6ad87;
+  border-radius: 10px;
+  border: 2px solid wheat;
+  color: #474747;
+  font-size: 15px;
+  height: 22px;
+  width: 187px;
+  padding: 5px;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+input[type=submit] {
+  background-color: #867666;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid #474747;
+}
+
+.container .error {
+  background: none;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  padding: 14px 10px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+body {
+  background-color: #eae2d6;
+}
+
+.profile-bar {
+  background-color: #867666;
+  color: #eeeeee;
+  height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.profile-bar .header-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+}
+.profile-bar .header-links .logged-in {
+  font-size: 20px;
+  color: #eeeeee;
+}
+.profile-bar .header-links a {
+  color: #eeeeee;
+  border-radius: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 5px 30px;
+}
+.profile-bar .header-links a:hover {
+  color: #474747;
+  background-color: #eae2d6;
+}
+
+/*********************/
+/* Navbar with links */
+/*********************/
+.redirect {
+  height: 100%;
+  margin-top: 25%;
+  font-size: 30px;
+}
+
+.container {
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #d5c3aa;
+  border-radius: 20px;
+  width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  height: 400px;
+}
+.container .error {
+  border: 2px solid #e20505;
+  border-radius: 10px;
+  color: #474747;
+}
+
+h1 {
+  color: #474747;
+}
+
+input[type=text], textarea {
+  width: 300px;
+  font-size: 15px;
+}
+
+input[type=text] {
+  height: 30px;
+  padding-top: 5px;
+}
+
+textarea {
+  height: 120px;
+}
+
+#add-answer-textarea {
+  height: 200px;
+}
+
+input[type=submit] {
+  height: 40px;
+  width: 150px;
+  padding: 5px;
+  font-size: 120%;
+  font-weight: 750;
+}
+
+input[type=submit]:hover {
+  color: #2ecc71;
+}
+
+form {
+  flex-direction: column;
+  justify-content: space-between;
+}
+form ::placeholder {
+  color: #474747;
+}
+form * {
+  margin: 10px;
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=add.css.map */

@@ -1,0 +1,5 @@
+/vendor/
+/.idea/
+App/Config/config.json
+*.log
+/TemplateCache/

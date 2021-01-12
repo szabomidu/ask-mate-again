@@ -1,0 +1,34 @@
+@import 'variables';
+@import 'base';
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  @extend %display-flex;
+}
+
+.redirect {
+  font-size: 30px;
+}
+
+.form {
+  @extend %form;
+
+  .content input {
+    @extend %common;
+  }
+
+  .error {
+    @extend %common;
+  }
+
+  .submit {
+    button[type = "submit"] {
+      @extend %common;
+    }
+  }
+}

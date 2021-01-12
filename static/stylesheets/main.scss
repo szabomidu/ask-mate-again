@@ -1,0 +1,121 @@
+@import "variables";
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/********************************/
+/* Header bar with profile info */
+/********************************/
+@import 'base';
+
+
+/****************/
+/* Welcome text */
+/****************/
+.main-text {
+  color: $text-color-dark;
+  text-align: center;
+  margin-right: 100px;
+  margin-left: 100px;
+  font-size: 50px;
+}
+
+.text{
+  color: $text-color-dark;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+
+/*********************/
+/* Navbar with links */
+/*********************/
+@import url(navbar.css);
+
+
+/*****************/
+/* Content table */
+/*****************/
+.content-table {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  background:  #867666;
+
+  width: 98.5%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3px;
+
+  border: 2px solid #867666;
+  border-radius: 10px;
+  font-size: 15px;
+  overflow: hidden;
+
+  thead {
+    color: $text-color-light;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    th {
+      padding: 5px 15px;
+      color: $text-color-light;
+      background-color: $background-color-darker;
+    }
+
+    .id {
+      width: 88px;
+    }
+
+    .time {
+       width: 290px;
+     }
+
+    .title {
+      width: 190px;
+    }
+
+    .message {
+      width: 421px;
+    }
+
+    .img {
+      width: 143px;
+    }
+
+    .vote {
+      width: 231px;
+    }
+  }
+
+  tbody {
+    background-color: $table-cell-background-color-light;
+    color: $text-color-dark;
+
+    font-weight: bold;
+
+    td {
+      height: 50px;
+      padding: 6px 15px;
+    }
+  }
+
+  tr {
+    text-align: center;
+  }
+}
+
+
+/*********/
+/* Links */
+/*********/
+a {
+  text-decoration: none;
+  color: $background-color-darker;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $success;
+}
