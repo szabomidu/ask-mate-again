@@ -55,7 +55,7 @@ After starting you should be able to see the application under your localhost pa
 
 ## Authors
 
-    - Szabó Friderika, Gamper Renátó, Bodroghy Kristóf, Catanzáró Tamás
+    - Szabó Friderika, Schőn Ciprián, Bodroghy Kristóf, Catanzáró Tamás
 
 ## Contact
 
