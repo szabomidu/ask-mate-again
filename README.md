@@ -37,21 +37,21 @@ Server built:   Aug  7 2020 10:55:45
 ```
 
   - If you don't have Apache and PHP installed, visit these pages to install them:
-    [Install Apache](http://httpd.apache.org/docs/current/install.html)
-    [Install PHP](https://www.php.net/manual/en/install.php)
+[Install Apache](http://httpd.apache.org/docs/current/install.html)
+[Install PHP](https://www.php.net/manual/en/install.php)
 
 
 ## Setup Apache
 
-    There are multiple ways to set up Apache to be able to run a project.
-    - Set DocumentRoot in httpd.conf file to the project folder [Configure Apache](https://www.tecmint.com/change-root-directory-of-apache-web-server/)
-    - Create a virtual host [How to set up a Virtual Host](https://httpd.apache.org/docs/2.4/vhosts/examples.html)
+There are multiple ways to set up Apache to be able to run a project.
+- Set DocumentRoot in httpd.conf file to the project folder [Configure Apache](https://www.tecmint.com/change-root-directory-of-apache-web-server/)
+- Create a virtual host [How to set up a Virtual Host](https://httpd.apache.org/docs/2.4/vhosts/examples.html)
 
 ## Start Apache
 
-    After you set up Apache you should be able to start it.
-    [How to start Apache](https://httpd.apache.org/docs/2.4/invoking.html)
-    After starting you should be able to see the application under your localhost page.
+After you set up Apache you should be able to start it.
+[How to start Apache](https://httpd.apache.org/docs/2.4/invoking.html)
+After starting you should be able to see the application under your localhost page.
 
 ## Authors
 
